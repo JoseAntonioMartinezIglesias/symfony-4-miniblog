@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - SebastianBergmann\Money\OverflowException</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#SebastianBergmann_Money">SebastianBergmann\Money</a>
+          </li>
+          <li class="separator">OverflowException</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/exceptions/OverflowException.php.html#line22">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>SebastianBergmann\Money\</small>OverflowException</h1>
+        <h4>Exception that is throw when when an amount overflows valid integers</h4>
+        <p/>
+        <ul>
+          <li>Author: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>Copyright: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>License: http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class OverflowException
+                extends <a title="OverflowException" href="../classes/OverflowException.html">OverflowException</a>
+                implements
+                <a title="SebastianBergmann\Money\Exception" href="../interfaces/SebastianBergmann_Money_Exception.html">Exception</a>
+            {<br/><ul class="none"><li>// Inherited members from <span title="OverflowException">OverflowException</span></li><li>protected  <a href="#members">$message</a>;
+                        </li><li>protected  <a href="#members">$code</a>;
+                        </li><li>protected  <a href="#members">$file</a>;
+                        </li><li>protected  <a href="#members">$line</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="RuntimeException">RuntimeException</span></li><li>protected  <a href="#members">$message</a>;
+                        </li><li>protected  <a href="#members">$code</a>;
+                        </li><li>protected  <a href="#members">$file</a>;
+                        </li><li>protected  <a href="#members">$line</a>;
+                        </li></ul><ul class="none"><li>// Inherited members from <span title="Exception">Exception</span></li><li>protected  <a href="#members">$message</a>;
+                        </li><li>protected  <a href="#members">$code</a>;
+                        </li><li>protected  <a href="#members">$file</a>;
+                        </li><li>protected  <a href="#members">$line</a>;
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="OverflowException">OverflowException</span></li><li>public final string <a title="OverflowException" href="../classes/OverflowException/getMessage.html">getMessage</a>()
+                        </li><li>public final Throwable <a title="OverflowException" href="../classes/OverflowException/getPrevious.html">getPrevious</a>()
+                        </li><li>public final mixed <a title="OverflowException" href="../classes/OverflowException/getCode.html">getCode</a>()
+                        </li><li>public final string <a title="OverflowException" href="../classes/OverflowException/getFile.html">getFile</a>()
+                        </li><li>public final int <a title="OverflowException" href="../classes/OverflowException/getLine.html">getLine</a>()
+                        </li><li>public final array <a title="OverflowException" href="../classes/OverflowException/getTrace.html">getTrace</a>()
+                        </li><li>public final string <a title="OverflowException" href="../classes/OverflowException/getTraceAsString.html">getTraceAsString</a>()
+                        </li><li>public string <a title="OverflowException" href="../classes/OverflowException/__toString.html">__toString</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="RuntimeException">RuntimeException</span></li><li>public final string <a title="RuntimeException" href="../classes/RuntimeException/getMessage.html">getMessage</a>()
+                        </li><li>public final Throwable <a title="RuntimeException" href="../classes/RuntimeException/getPrevious.html">getPrevious</a>()
+                        </li><li>public final mixed <a title="RuntimeException" href="../classes/RuntimeException/getCode.html">getCode</a>()
+                        </li><li>public final string <a title="RuntimeException" href="../classes/RuntimeException/getFile.html">getFile</a>()
+                        </li><li>public final int <a title="RuntimeException" href="../classes/RuntimeException/getLine.html">getLine</a>()
+                        </li><li>public final array <a title="RuntimeException" href="../classes/RuntimeException/getTrace.html">getTrace</a>()
+                        </li><li>public final string <a title="RuntimeException" href="../classes/RuntimeException/getTraceAsString.html">getTraceAsString</a>()
+                        </li><li>public string <a title="RuntimeException" href="../classes/RuntimeException/__toString.html">__toString</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Exception">Exception</span></li><li>public void <a title="Exception" href="../classes/Exception/__construct.html">__construct</a>()
+                        </li><li>public final string <a title="Exception" href="../classes/Exception/getMessage.html">getMessage</a>()
+                        </li><li>public final Throwable <a title="Exception" href="../classes/Exception/getPrevious.html">getPrevious</a>()
+                        </li><li>public final mixed <a title="Exception" href="../classes/Exception/getCode.html">getCode</a>()
+                        </li><li>public final string <a title="Exception" href="../classes/Exception/getFile.html">getFile</a>()
+                        </li><li>public final int <a title="Exception" href="../classes/Exception/getLine.html">getLine</a>()
+                        </li><li>public final array <a title="Exception" href="../classes/Exception/getTrace.html">getTrace</a>()
+                        </li><li>public final string <a title="Exception" href="../classes/Exception/getTraceAsString.html">getTraceAsString</a>()
+                        </li><li>public string <a title="Exception" href="../classes/Exception/__toString.html">__toString</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="OverflowException" href="../classes/OverflowException.html">OverflowException</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="SebastianBergmann\Money\Exception" href="../interfaces/SebastianBergmann_Money_Exception.html">SebastianBergmann\Money\Exception</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="code"><strong>$code</strong>
+                —
+                int<br/><span class="indent">The exception code</span></li>
+            <li id="code"><strong>$code</strong>
+                —
+                int<br/><span class="indent">The exception code</span></li>
+            <li id="code"><strong>$code</strong>
+                —
+                int<br/><span class="indent">The exception code</span></li>
+            <li id="file"><strong>$file</strong>
+                —
+                string<br/><span class="indent">The filename where the exception was created</span></li>
+            <li id="file"><strong>$file</strong>
+                —
+                string<br/><span class="indent">The filename where the exception was created</span></li>
+            <li id="file"><strong>$file</strong>
+                —
+                string<br/><span class="indent">The filename where the exception was created</span></li>
+            <li id="line"><strong>$line</strong>
+                —
+                int<br/><span class="indent">The line where the exception was created</span></li>
+            <li id="line"><strong>$line</strong>
+                —
+                int<br/><span class="indent">The line where the exception was created</span></li>
+            <li id="line"><strong>$line</strong>
+                —
+                int<br/><span class="indent">The line where the exception was created</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">The exception message</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">The exception message</span></li>
+            <li id="message"><strong>$message</strong>
+                —
+                string<br/><span class="indent">The exception message</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h3>Inherited from <a title="OverflowException" href="../classes/OverflowException.html">OverflowException</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString">
+              <a title="OverflowException" href="../classes/OverflowException/__toString.html">__toString()</a>
+            </li>
+            <li id="getCode">
+              <a title="OverflowException" href="../classes/OverflowException/getCode.html">getCode()</a>
+            </li>
+            <li id="getFile">
+              <a title="OverflowException" href="../classes/OverflowException/getFile.html">getFile()</a>
+            </li>
+            <li id="getLine">
+              <a title="OverflowException" href="../classes/OverflowException/getLine.html">getLine()</a>
+            </li>
+            <li id="getMessage">
+              <a title="OverflowException" href="../classes/OverflowException/getMessage.html">getMessage()</a>
+            </li>
+            <li id="getPrevious">
+              <a title="OverflowException" href="../classes/OverflowException/getPrevious.html">getPrevious()</a>
+            </li>
+            <li id="getTrace">
+              <a title="OverflowException" href="../classes/OverflowException/getTrace.html">getTrace()</a>
+            </li>
+            <li id="getTraceAsString">
+              <a title="OverflowException" href="../classes/OverflowException/getTraceAsString.html">getTraceAsString()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="RuntimeException" href="../classes/RuntimeException.html">RuntimeException</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString">
+              <a title="RuntimeException" href="../classes/RuntimeException/__toString.html">__toString()</a>
+            </li>
+            <li id="getCode">
+              <a title="RuntimeException" href="../classes/RuntimeException/getCode.html">getCode()</a>
+            </li>
+            <li id="getFile">
+              <a title="RuntimeException" href="../classes/RuntimeException/getFile.html">getFile()</a>
+            </li>
+            <li id="getLine">
+              <a title="RuntimeException" href="../classes/RuntimeException/getLine.html">getLine()</a>
+            </li>
+            <li id="getMessage">
+              <a title="RuntimeException" href="../classes/RuntimeException/getMessage.html">getMessage()</a>
+            </li>
+            <li id="getPrevious">
+              <a title="RuntimeException" href="../classes/RuntimeException/getPrevious.html">getPrevious()</a>
+            </li>
+            <li id="getTrace">
+              <a title="RuntimeException" href="../classes/RuntimeException/getTrace.html">getTrace()</a>
+            </li>
+            <li id="getTraceAsString">
+              <a title="RuntimeException" href="../classes/RuntimeException/getTraceAsString.html">getTraceAsString()</a>
+            </li>
+          </ul>
+          <h3>Inherited from <a title="Exception" href="../classes/Exception.html">Exception</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString"><a title="Exception" href="../classes/Exception/__toString.html">__toString()</a>
+                — String representation of the exception</li>
+            <li id="getCode"><a title="Exception" href="../classes/Exception/getCode.html">getCode()</a>
+                — Gets the Exception code</li>
+            <li id="getFile"><a title="Exception" href="../classes/Exception/getFile.html">getFile()</a>
+                — Gets the file in which the exception was created</li>
+            <li id="getLine"><a title="Exception" href="../classes/Exception/getLine.html">getLine()</a>
+                — Gets the line in which the exception was created</li>
+            <li id="getMessage"><a title="Exception" href="../classes/Exception/getMessage.html">getMessage()</a>
+                — Gets the Exception message</li>
+            <li id="getPrevious"><a title="Exception" href="../classes/Exception/getPrevious.html">getPrevious()</a>
+                — Returns previous Exception</li>
+            <li id="getTrace"><a title="Exception" href="../classes/Exception/getTrace.html">getTrace()</a>
+                — Gets the stack trace</li>
+            <li id="getTraceAsString"><a title="Exception" href="../classes/Exception/getTraceAsString.html">getTraceAsString()</a>
+                — Gets the stack trace as a string</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-01-02T16:09:57+00:00 (commit #<span title="bded08469cc5ee12cc2d6a661acd31918c5f4bcc">bded084</span>)</h3>
+            <div>
+              <p>
+                        Author: Henrique Moody (henriquemoody@gmail.com) /
+                        Commiter: Henrique Moody (henriquemoody@gmail.com)
+                    </p>
+              <pre class="wrapped">Update license and copyright in all files</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-08T13:04:31+00:00 (commit #<span title="6b3755098a6343080092edae85998b791d7a34e3">6b37550</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix CS violations</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-08T12:16:54+00:00 (commit #<span title="9086f65bf856ae4f9b7a10680b7d198e74811e0c">9086f65</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix CS violation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-07T03:48:11+00:00 (commit #<span title="a8ae3ab40ee9a4cda42049131742fe91568556c6">a8ae3ab</span>)</h3>
+            <div>
+              <p>
+                        Author: Cam Spiers (camspiers@gmail.com) /
+                        Commiter: Cam Spiers (camspiers@gmail.com)
+                    </p>
+              <pre class="wrapped">Provide new functionality to ensure that internal operations don't
+disguise imprecision
+
+In certain cases it is possible for the Money object to deal in numbers
+which overflow the integer limit of PHP this introduces errors that a
+users of the package will not be aware of. This commit causes
+failure by throwing an exception when a to-be-cast number is out of integer</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-01-21T19:47:31+00:00 (commit #<span title="1b8b5a63b3ff1691c36998a6edf7030f5c751d4a">1b8b5a6</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Bump copyright year</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-13T09:24:47+00:00 (commit #<span title="4596e253a36092f76f9f49d4143d7bb0998f52d1">4596e25</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix @copyright annotation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T13:57:07+00:00 (commit #<span title="79d5614028f3ff8c3fbac5d57a04e818d4773681">79d5614</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Format code according to PSR-2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T10:08:28+00:00 (commit #<span title="d04887defe8b2331256e37d3585d28941ec004d2">d04887d</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add missing docblocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-04-12T14:00:44+00:00 (commit #<span title="d1bf47f14ff12723a718b1721658e5dc3f854ed3">d1bf47f</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Initial import.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

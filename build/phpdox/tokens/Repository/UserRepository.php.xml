@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1013" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c1de96f645ff5be1b03998daf15a3250c4c231c1" relative="Repository/UserRepository.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
+  </line>
+  <line no="10">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Repository</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Entity</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">User</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="15">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Doctrine</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Bundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DoctrineBundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Repository</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ServiceEntityRepository</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="16">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Doctrine</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Common</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Persistence</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ManagerRegistry</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="17"/>
+  <line no="18">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT"> * This custom Doctrine repository is empty because so far we don't need any custom</token>
+  </line>
+  <line no="20">
+    <token name="T_DOC_COMMENT"> * method to query for application user information. But it's always a good practice</token>
+  </line>
+  <line no="21">
+    <token name="T_DOC_COMMENT"> * to define a custom repository that will be used when the application grows.</token>
+  </line>
+  <line no="22">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="23">
+    <token name="T_DOC_COMMENT"> * See https://symfony.com/doc/current/doctrine/repository.html</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT"> * @author Ryan Weaver &lt;weaverryan@gmail.com&gt;</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT"> * @author Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</token>
+  </line>
+  <line no="27">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="28">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">UserRepository</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ServiceEntityRepository</token>
+  </line>
+  <line no="29">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="30">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">ManagerRegistry</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$registry</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="31">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="32">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_STRING">parent</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$registry</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">User</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_CLASS">class</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="34">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="35"/>
+</source>

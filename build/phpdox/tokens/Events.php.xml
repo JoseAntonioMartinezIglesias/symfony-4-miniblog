@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="../src" file="Events.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Events.php" size="814" time="2019-02-14T20:40:37+00:00" unixtime="1550176837" sha1="eb307ea0213f45a92705bd69b360e6b794f03640" relative="Events.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
+  </line>
+  <line no="10">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="15">
+    <token name="T_DOC_COMMENT"> * This class defines the names of all the events dispatched in</token>
+  </line>
+  <line no="16">
+    <token name="T_DOC_COMMENT"> * the Symfony Demo application. It's not mandatory to create a</token>
+  </line>
+  <line no="17">
+    <token name="T_DOC_COMMENT"> * class like this, but it's considered a good practice.</token>
+  </line>
+  <line no="18">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT"> * @author Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;</token>
+  </line>
+  <line no="20">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="21">
+    <token name="T_FINAL">final</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Events</token>
+  </line>
+  <line no="22">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="23">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT">     * For the event naming conventions, see:</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT">     * https://symfony.com/doc/current/components/event_dispatcher.html#naming-conventions.</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT">     * @Event("Symfony\Component\EventDispatcher\GenericEvent")</token>
+  </line>
+  <line no="27">
+    <token name="T_DOC_COMMENT">     * @var string</token>
+  </line>
+  <line no="28">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="29">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_CONST">const</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">COMMENT_CREATED</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'comment.created'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="30">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="31"/>
+</source>

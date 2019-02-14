@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Utils\MomentFormatConverter" namespace="App\Utils" name="MomentFormatConverter" abstract="false" final="false" start="19" end="48">
+  <file path="../src/Utils" file="MomentFormatConverter.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/MomentFormatConverter.php" size="1270" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="b5ae070bd9d5c1669cd9403caee1b484a8b510a7" relative="Utils/MomentFormatConverter.php"/>
+  <docblock>
+    <description compact="This class is used to convert PHP date format to moment.js format."/>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <member name="formatConvertRules" default="" type="array" visibility="private" static="true" line="28">
+    <docblock>
+      <description compact="This defines the mapping between PHP ICU date format (key) and moment.js date format (value) For ICU formats see http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax For Moment formats see http://momentjs.com/docs/#/displaying/format/."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="convert" start="44" end="47" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returns associated moment.js format."/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="format" byreference="false" type="string"/>
+  </method>
+</class>

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Controller/Admin" file="UserController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/UserController.php" size="1155" time="2019-02-14T08:42:17+00:00" unixtime="1550133737" sha1="d49b69d020b7a1329b752f3461f8cabe29b2286d" relative="Controller/Admin/UserController.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
+  </line>
+  <line no="10">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Controller</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Admin</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Utils</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Slugger</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="15">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Sensio</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Bundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">FrameworkExtraBundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Configuration</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">IsGranted</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="16">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Bundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">FrameworkBundle</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Controller</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">AbstractController</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="17">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Form</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Extension</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Core</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Type</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">SubmitType</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="18">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">HttpFoundation</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Request</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="19">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">HttpFoundation</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Response</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="20">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Routing</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Annotation</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Route</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="21"/>
+  <line no="22">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">UserController</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">AbstractController</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="23"/>
+  <line no="24">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT">     * @Route("/", methods={"GET"}, name="admin_user_index")</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="27">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">index</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Response</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="28">
+    <token name="T_WHITESPACE">        </token>
+  </line>
+  <line no="29">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$users</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getDoctrine</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getRepository</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$persistentObject</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="30">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">find</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="31">
+    <token name="T_WHITESPACE">        </token>
+  </line>
+  <line no="32">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">render</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$view</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">        </token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">//  $authorPosts = $posts-&gt;findBy(['author' =&gt; $this-&gt;getUser()], ['publishedAt' =&gt; 'DESC']);</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">//return $this-&gt;render('admin/blog/index.html.twig', ['posts' =&gt; $authorPosts]);</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="37"/>
+  <line no="38">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="39"/>
+</source>

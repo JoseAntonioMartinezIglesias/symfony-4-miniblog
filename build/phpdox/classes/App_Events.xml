@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Events" namespace="App" name="Events" abstract="false" final="true" start="21" end="30">
+  <file path="../src" file="Events.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Events.php" size="814" time="2019-02-14T20:40:37+00:00" unixtime="1550176837" sha1="eb307ea0213f45a92705bd69b360e6b794f03640" relative="Events.php"/>
+  <docblock>
+    <description compact="This class defines the names of all the events dispatched in the Symfony Demo application. It's not mandatory to create a class like this, but it's considered a good practice."/>
+    <author value="Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;"/>
+  </docblock>
+  <constant type="string" name="COMMENT_CREATED" value="'comment.created'">
+    <docblock>
+      <description compact="For the event naming conventions, see: https://symfony.com/doc/current/components/event_dispatcher.html#naming-conventions."/>
+      <event value="(&quot;Symfony\Component\EventDispatcher\GenericEvent&quot;)"/>
+      <var type="string"/>
+    </docblock>
+  </constant>
+</class>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Command\AddUserCommand" namespace="App\Command" name="AddUserCommand" abstract="false" final="false" start="47" end="259">
+  <file path="../src/Command" file="AddUserCommand.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/AddUserCommand.php" size="10492" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="e5b461e3c887c93e4971df463ad5724134544d14" relative="Command/AddUserCommand.php"/>
+  <docblock>
+    <description compact="A console command that creates users and stores them in the database.">To use this command, open a terminal window, enter into your project
+directory and execute the following:
+
+    $ php bin/console app:add-user
+
+To output detailed information, increase the command verbosity:
+
+    $ php bin/console app:add-user -vv
+
+See https://symfony.com/doc/current/cookbook/console/console_command.html
+For more advanced uses, commands can be defined as services too. See
+https://symfony.com/doc/current/console/commands_as_services.html</description>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Console\Command\Command" namespace="Symfony\Component\Console\Command" name="Command" unresolved="true"/>
+  <member name="defaultName" default="'app:add-user'" type="string" visibility="protected" static="true" line="51"/>
+  <member name="io" visibility="private" static="false" line="56">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="Symfony\Component\Console\Style\SymfonyStyle" namespace="Symfony\Component\Console\Style" name="SymfonyStyle"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="entityManager" visibility="private" static="false" line="58"/>
+  <member name="passwordEncoder" visibility="private" static="false" line="59"/>
+  <member name="validator" visibility="private" static="false" line="60"/>
+  <member name="users" visibility="private" static="false" line="61"/>
+  <constructor name="__construct" start="63" end="71" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="em" byreference="false" type="object">
+      <type full="Doctrine\ORM\EntityManagerInterface" namespace="Doctrine\ORM" name="EntityManagerInterface"/>
+    </parameter>
+    <parameter name="encoder" byreference="false" type="object">
+      <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
+    </parameter>
+    <parameter name="validator" byreference="false" type="object">
+      <type full="App\Utils\Validator" namespace="App\Utils" name="Validator"/>
+    </parameter>
+    <parameter name="users" byreference="false" type="object">
+      <type full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository"/>
+    </parameter>
+  </constructor>
+  <method name="configure" start="76" end="89" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+  </method>
+  <method name="initialize" start="95" end="101" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This optional method is the first one executed for a command after configure() and is useful to initialize properties based on the input arguments and options."/>
+    </docblock>
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="SymfonyStyle is an optional feature that Symfony provides so you can" line="97"/>
+      <comment value="apply a consistent look to the commands of your application." line="98"/>
+      <comment value="See https://symfony.com/doc/current/console/style.html" line="99"/>
+    </inline>
+  </method>
+  <method name="interact" start="113" end="164" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This method is executed after initialize() and before execute(). Its purpose is to check if some of the options/arguments are missing and interactively ask the user for those values.">This method is completely optional. If you are developing an internal console
+command, you probably should not implement this method because it requires
+quite a lot of work. However, if the command is meant to be used by external
+users, this method is a nice way to fall back and prevent errors.</description>
+    </docblock>
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="Ask for the username if it's not defined" line="129"/>
+      <comment value="Ask for the password if it's not defined" line="138"/>
+      <comment value="Ask for the email if it's not defined" line="147"/>
+      <comment value="Ask for the full name if it's not defined" line="156"/>
+    </inline>
+  </method>
+  <method name="execute" start="170" end="204" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This method is executed after interact() and initialize(). It usually contains the logic to execute to complete this command task."/>
+    </docblock>
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="make sure to validate the user data is correct" line="181"/>
+      <comment value="create the user and encode its password" line="184"/>
+      <comment value="See https://symfony.com/doc/current/book/security.html#security-encoding-password" line="191"/>
+    </inline>
+  </method>
+  <method name="validateUserData" start="206" end="226" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="username" byreference="false" type="{unknown}"/>
+    <parameter name="plainPassword" byreference="false" type="{unknown}"/>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+    <parameter name="fullName" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="first check if a user with the same username already exists." line="208"/>
+      <comment value="validate password and email if is not this input means interactive." line="215"/>
+      <comment value="check if a user with the same email already exists." line="220"/>
+    </inline>
+  </method>
+  <method name="getCommandHelp" start="233" end="258" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="The command help is usually included in the configure() method, but when it's too long, it's better to define a separate method to maintain the code readability."/>
+    </docblock>
+    <return type="string" nullable="false"/>
+  </method>
+</class>

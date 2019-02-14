@@ -1,0 +1,1950 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Command" file="AddUserCommand.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/AddUserCommand.php" size="10492" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="e5b461e3c887c93e4971df463ad5724134544d14" relative="Command/AddUserCommand.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
+  </line>
+  <line no="10">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Command</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Entity</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">User</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="15">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Repository</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">UserRepository</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="16">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Utils</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Validator</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="17">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Doctrine</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ORM</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">EntityManagerInterface</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="18">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Command</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Command</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="19">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Exception</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">RuntimeException</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="20">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Input</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">InputArgument</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="21">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Input</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">InputInterface</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="22">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Input</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">InputOption</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="23">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Output</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">OutputInterface</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="24">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Console</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Style</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">SymfonyStyle</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="25">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Security</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Core</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Encoder</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">UserPasswordEncoderInterface</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="26">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Stopwatch</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Stopwatch</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="27"/>
+  <line no="28">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="29">
+    <token name="T_DOC_COMMENT"> * A console command that creates users and stores them in the database.</token>
+  </line>
+  <line no="30">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="31">
+    <token name="T_DOC_COMMENT"> * To use this command, open a terminal window, enter into your project</token>
+  </line>
+  <line no="32">
+    <token name="T_DOC_COMMENT"> * directory and execute the following:</token>
+  </line>
+  <line no="33">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="34">
+    <token name="T_DOC_COMMENT"> *     $ php bin/console app:add-user</token>
+  </line>
+  <line no="35">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="36">
+    <token name="T_DOC_COMMENT"> * To output detailed information, increase the command verbosity:</token>
+  </line>
+  <line no="37">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="38">
+    <token name="T_DOC_COMMENT"> *     $ php bin/console app:add-user -vv</token>
+  </line>
+  <line no="39">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="40">
+    <token name="T_DOC_COMMENT"> * See https://symfony.com/doc/current/cookbook/console/console_command.html</token>
+  </line>
+  <line no="41">
+    <token name="T_DOC_COMMENT"> * For more advanced uses, commands can be defined as services too. See</token>
+  </line>
+  <line no="42">
+    <token name="T_DOC_COMMENT"> * https://symfony.com/doc/current/console/commands_as_services.html</token>
+  </line>
+  <line no="43">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="44">
+    <token name="T_DOC_COMMENT"> * @author Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</token>
+  </line>
+  <line no="45">
+    <token name="T_DOC_COMMENT"> * @author Yonel Ceruto &lt;yonelceruto@gmail.com&gt;</token>
+  </line>
+  <line no="46">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="47">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">AddUserCommand</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Command</token>
+  </line>
+  <line no="48">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="49">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_COMMENT">// to make your command lazily loaded, configure the $defaultName static property,</token>
+  </line>
+  <line no="50">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_COMMENT">// so it will be instantiated only when the command is actually called.</token>
+  </line>
+  <line no="51">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PROTECTED">protected</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STATIC">static</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$defaultName</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'app:add-user'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="52"/>
+  <line no="53">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="54">
+    <token name="T_DOC_COMMENT">     * @var SymfonyStyle</token>
+  </line>
+  <line no="55">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="56">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$io</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="57"/>
+  <line no="58">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$entityManager</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="59">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$passwordEncoder</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="60">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$validator</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="61">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$users</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="62"/>
+  <line no="63">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">EntityManagerInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$em</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">UserPasswordEncoderInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$encoder</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Validator</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$validator</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">UserRepository</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$users</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="64">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="65">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_STRING">parent</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">__construct</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="66"/>
+  <line no="67">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">entityManager</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$em</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="68">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">passwordEncoder</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$encoder</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="69">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$validator</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="70">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">users</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$users</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="71">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="72"/>
+  <line no="73">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="74">
+    <token name="T_DOC_COMMENT">     * {@inheritdoc}</token>
+  </line>
+  <line no="75">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="76">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PROTECTED">protected</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">configure</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="77">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="78">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+  </line>
+  <line no="79">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setDescription</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Creates users and stores them in the database'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="80">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setHelp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getCommandHelp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="81">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_COMMENT">// commands can optionally define arguments and/or options (mandatory and optional)</token>
+  </line>
+  <line no="82">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_COMMENT">// see https://symfony.com/doc/current/components/console/console_arguments.html</token>
+  </line>
+  <line no="83">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">addArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">InputArgument</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">OPTIONAL</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'The username of the new user'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="84">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">addArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">InputArgument</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">OPTIONAL</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'The plain password of the new user'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="85">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">addArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">InputArgument</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">OPTIONAL</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'The email of the new user'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="86">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">addArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'full-name'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">InputArgument</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">OPTIONAL</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'The full name of the new user'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="87">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">addOption</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'admin'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">InputOption</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">VALUE_NONE</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'If set, the user is created as an administrator'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="88">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="89">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="90"/>
+  <line no="91">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="92">
+    <token name="T_DOC_COMMENT">     * This optional method is the first one executed for a command after configure()</token>
+  </line>
+  <line no="93">
+    <token name="T_DOC_COMMENT">     * and is useful to initialize properties based on the input arguments and options.</token>
+  </line>
+  <line no="94">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="95">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PROTECTED">protected</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">initialize</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">InputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">OutputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$output</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="96">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="97">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// SymfonyStyle is an optional feature that Symfony provides so you can</token>
+  </line>
+  <line no="98">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// apply a consistent look to the commands of your application.</token>
+  </line>
+  <line no="99">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// See https://symfony.com/doc/current/console/style.html</token>
+  </line>
+  <line no="100">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">SymfonyStyle</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$output</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="101">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="102"/>
+  <line no="103">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="104">
+    <token name="T_DOC_COMMENT">     * This method is executed after initialize() and before execute(). Its purpose</token>
+  </line>
+  <line no="105">
+    <token name="T_DOC_COMMENT">     * is to check if some of the options/arguments are missing and interactively</token>
+  </line>
+  <line no="106">
+    <token name="T_DOC_COMMENT">     * ask the user for those values.</token>
+  </line>
+  <line no="107">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="108">
+    <token name="T_DOC_COMMENT">     * This method is completely optional. If you are developing an internal console</token>
+  </line>
+  <line no="109">
+    <token name="T_DOC_COMMENT">     * command, you probably should not implement this method because it requires</token>
+  </line>
+  <line no="110">
+    <token name="T_DOC_COMMENT">     * quite a lot of work. However, if the command is meant to be used by external</token>
+  </line>
+  <line no="111">
+    <token name="T_DOC_COMMENT">     * users, this method is a nice way to fall back and prevent errors.</token>
+  </line>
+  <line no="112">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="113">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PROTECTED">protected</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">interact</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">InputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">OutputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$output</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="114">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="115">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'full-name'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="116">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="117">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="118"/>
+  <line no="119">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">title</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Add User Command Interactive Wizard'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="120">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">text</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+  </line>
+  <line no="121">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'If you prefer to not use this interactive wizard, provide the'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="122">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'arguments required by this command as follows:'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="123">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="124">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">' $ php bin/console app:add-user username password email@example.com'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="125">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="126">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Now we\'ll ask you for the value of all the missing command arguments.'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="127">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="128"/>
+  <line no="129">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// Ask for the username if it's not defined</token>
+  </line>
+  <line no="130">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="131">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="132">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">text</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">' &gt; &lt;info&gt;Username&lt;/info&gt;: '</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="133">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="134">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ask</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Username'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'validateUsername'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="135">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="136">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="137"/>
+  <line no="138">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// Ask for the password if it's not defined</token>
+  </line>
+  <line no="139">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$password</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="140">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$password</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="141">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">text</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">' &gt; &lt;info&gt;Password&lt;/info&gt;: '</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_STRING">str_repeat</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'*'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">mb_strlen</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$password</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="142">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="143">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$password</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">askHidden</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Password (your type will be hidden)'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'validatePassword'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="144">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$password</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="145">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="146"/>
+  <line no="147">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// Ask for the email if it's not defined</token>
+  </line>
+  <line no="148">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="149">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="150">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">text</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">' &gt; &lt;info&gt;Email&lt;/info&gt;: '</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="151">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="152">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ask</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Email'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'validateEmail'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="153">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="154">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="155"/>
+  <line no="156">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// Ask for the full name if it's not defined</token>
+  </line>
+  <line no="157">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'full-name'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="158">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="159">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">text</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">' &gt; &lt;info&gt;Full Name&lt;/info&gt;: '</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="160">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELSE">else</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="161">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">ask</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Full Name'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">null</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'validateFullName'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="162">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'full-name'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="163">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="164">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="165"/>
+  <line no="166">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="167">
+    <token name="T_DOC_COMMENT">     * This method is executed after interact() and initialize(). It usually</token>
+  </line>
+  <line no="168">
+    <token name="T_DOC_COMMENT">     * contains the logic to execute to complete this command task.</token>
+  </line>
+  <line no="169">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="170">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PROTECTED">protected</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">execute</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">InputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">OutputInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$output</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="171">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="172">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$stopwatch</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Stopwatch</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="173">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$stopwatch</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">start</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'add-user-command'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="174"/>
+  <line no="175">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="176">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$plainPassword</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="177">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="178">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getArgument</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'full-name'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="179">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$isAdmin</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$input</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getOption</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'admin'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="180"/>
+  <line no="181">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// make sure to validate the user data is correct</token>
+  </line>
+  <line no="182">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validateUserData</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$plainPassword</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="183"/>
+  <line no="184">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// create the user and encode its password</token>
+  </line>
+  <line no="185">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">User</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="186">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setFullName</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="187">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setUsername</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="188">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setEmail</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="189">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setRoles</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$isAdmin</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'ROLE_ADMIN'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'ROLE_USER'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="190"/>
+  <line no="191">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// See https://symfony.com/doc/current/book/security.html#security-encoding-password</token>
+  </line>
+  <line no="192">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$encodedPassword</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">passwordEncoder</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">encodePassword</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$plainPassword</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="193">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setPassword</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$encodedPassword</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="194"/>
+  <line no="195">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">entityManager</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">persist</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="196">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">entityManager</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">flush</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="197"/>
+  <line no="198">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">success</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">sprintf</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'%s was successfully created: %s (%s)'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$isAdmin</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_QUESTION_MARK">?</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'Administrator user'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'User'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getUsername</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getEmail</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="199"/>
+  <line no="200">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$event</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$stopwatch</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">stop</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'add-user-command'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="201">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$output</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">isVerbose</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="202">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">io</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">comment</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">sprintf</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'New user database id: %d / Elapsed time: %.2f ms / Consumed memory: %.2f MB'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$user</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getId</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$event</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getDuration</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$event</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getMemory</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DIV">/</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_LNUMBER">1024</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_POW">**</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_LNUMBER">2</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="203">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="204">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="205"/>
+  <line no="206">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">validateUserData</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$plainPassword</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="207">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="208">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// first check if a user with the same username already exists.</token>
+  </line>
+  <line no="209">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$existingUser</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">users</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">findOneBy</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'username'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="210"/>
+  <line no="211">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$existingUser</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="212">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_THROW">throw</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">RuntimeException</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">sprintf</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'There is already a user registered with the "%s" username.'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$username</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="213">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="214"/>
+  <line no="215">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// validate password and email if is not this input means interactive.</token>
+  </line>
+  <line no="216">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validatePassword</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$plainPassword</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="217">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validateEmail</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="218">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validator</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">validateFullName</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$fullName</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="219"/>
+  <line no="220">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// check if a user with the same email already exists.</token>
+  </line>
+  <line no="221">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$existingEmail</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">users</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">findOneBy</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="222"/>
+  <line no="223">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">null</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_NOT_IDENTICAL">!==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$existingEmail</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="224">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_THROW">throw</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">RuntimeException</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">sprintf</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'There is already a user registered with the "%s" email.'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$email</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="225">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="226">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="227"/>
+  <line no="228">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="229">
+    <token name="T_DOC_COMMENT">     * The command help is usually included in the configure() method, but when</token>
+  </line>
+  <line no="230">
+    <token name="T_DOC_COMMENT">     * it's too long, it's better to define a separate method to maintain the</token>
+  </line>
+  <line no="231">
+    <token name="T_DOC_COMMENT">     * code readability.</token>
+  </line>
+  <line no="232">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="233">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">getCommandHelp</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">string</token>
+  </line>
+  <line no="234">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="235">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_START_HEREDOC">&lt;&lt;&lt;'HELP'</token>
+  </line>
+  <line no="236">
+    <token name="T_ENCAPSED_AND_WHITESPACE">The &lt;info&gt;%command.name%&lt;/info&gt; command creates new users and saves them in the database:</token>
+  </line>
+  <line no="237"/>
+  <line no="238">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  &lt;info&gt;php %command.full_name%&lt;/info&gt; &lt;comment&gt;username password email&lt;/comment&gt;</token>
+  </line>
+  <line no="239"/>
+  <line no="240">
+    <token name="T_ENCAPSED_AND_WHITESPACE">By default the command creates regular users. To create administrator users,</token>
+  </line>
+  <line no="241">
+    <token name="T_ENCAPSED_AND_WHITESPACE">add the &lt;comment&gt;--admin&lt;/comment&gt; option:</token>
+  </line>
+  <line no="242"/>
+  <line no="243">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  &lt;info&gt;php %command.full_name%&lt;/info&gt; username password email &lt;comment&gt;--admin&lt;/comment&gt;</token>
+  </line>
+  <line no="244"/>
+  <line no="245">
+    <token name="T_ENCAPSED_AND_WHITESPACE">If you omit any of the three required arguments, the command will ask you to</token>
+  </line>
+  <line no="246">
+    <token name="T_ENCAPSED_AND_WHITESPACE">provide the missing values:</token>
+  </line>
+  <line no="247"/>
+  <line no="248">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  # command will ask you for the email</token>
+  </line>
+  <line no="249">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  &lt;info&gt;php %command.full_name%&lt;/info&gt; &lt;comment&gt;username password&lt;/comment&gt;</token>
+  </line>
+  <line no="250"/>
+  <line no="251">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  # command will ask you for the email and password</token>
+  </line>
+  <line no="252">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  &lt;info&gt;php %command.full_name%&lt;/info&gt; &lt;comment&gt;username&lt;/comment&gt;</token>
+  </line>
+  <line no="253"/>
+  <line no="254">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  # command will ask you for all arguments</token>
+  </line>
+  <line no="255">
+    <token name="T_ENCAPSED_AND_WHITESPACE">  &lt;info&gt;php %command.full_name%&lt;/info&gt;</token>
+  </line>
+  <line no="256"/>
+  <line no="257">
+    <token name="T_END_HEREDOC">HELP</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="258">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="259">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="260"/>
+</source>

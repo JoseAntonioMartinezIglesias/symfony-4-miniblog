@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\EventSubscriber\RedirectToPreferredLocaleSubscriber" namespace="App\EventSubscriber" name="RedirectToPreferredLocaleSubscriber" abstract="false" final="false" start="28" end="84">
+  <file path="../src/EventSubscriber" file="RedirectToPreferredLocaleSubscriber.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/EventSubscriber/RedirectToPreferredLocaleSubscriber.php" size="3111" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="833b90bd72fb6c7702cf9f7e7cafcc158302070c" relative="EventSubscriber/RedirectToPreferredLocaleSubscriber.php"/>
+  <docblock>
+    <description compact="When visiting the homepage, this listener redirects the user to the most appropriate localized version according to the browser settings.">See https://symfony.com/doc/current/components/http_kernel/introduction.html#the-kernel-request-event</description>
+    <author value="Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;"/>
+  </docblock>
+  <implements full="Symfony\Component\EventDispatcher\EventSubscriberInterface" namespace="Symfony\Component\EventDispatcher" name="EventSubscriberInterface" unresolved="true"/>
+  <member name="urlGenerator" visibility="private" static="false" line="30"/>
+  <member name="locales" visibility="private" static="false" line="31"/>
+  <member name="defaultLocale" visibility="private" static="false" line="32"/>
+  <constructor name="__construct" start="34" end="54" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="urlGenerator" byreference="false" type="object">
+      <type full="Symfony\Component\Routing\Generator\UrlGeneratorInterface" namespace="Symfony\Component\Routing\Generator" name="UrlGeneratorInterface"/>
+    </parameter>
+    <parameter name="locales" byreference="false" type="string"/>
+    <parameter name="defaultLocale" byreference="false" type="string" default="NULL"/>
+    <inline>
+      <comment value="Add the default locale at the first position of the array," line="49"/>
+      <comment value="because Symfony\HttpFoundation\Request::getPreferredLanguage" line="50"/>
+      <comment value="returns the first element when no an appropriate language is found" line="51"/>
+    </inline>
+  </constructor>
+  <method name="getSubscribedEvents" start="56" end="61" abstract="false" final="false" static="true" visibility="public">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="onKernelRequest" start="63" end="83" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Symfony\Component\HttpKernel\Event\GetResponseEvent" namespace="Symfony\Component\HttpKernel\Event" name="GetResponseEvent"/>
+    </parameter>
+    <inline>
+      <comment value="Ignore sub-requests and all URLs but the homepage" line="67"/>
+      <comment value="Ignore requests from referrers with the same HTTP host in order to prevent" line="71"/>
+      <comment value="changing language for users who possibly already selected it for this application." line="72"/>
+    </inline>
+  </method>
+</class>

@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Form" file="CommentType.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Form/CommentType.php" size="1793" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="b19df99bc85c2fbca4c14610b00b969cfabbee2d" relative="Form/CommentType.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">/*</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT"> *</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
+  </line>
+  <line no="10">
+    <token name="T_COMMENT"> */</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Form</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+  <line no="14">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">App</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Entity</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Comment</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="15">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Form</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">AbstractType</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="16">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Form</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Extension</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Core</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Type</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">TextareaType</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="17">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Form</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">FormBuilderInterface</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="18">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Symfony</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Component</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">OptionsResolver</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">OptionsResolver</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="19"/>
+  <line no="20">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="21">
+    <token name="T_DOC_COMMENT"> * Defines the form used to create and manipulate blog comments. Although in this</token>
+  </line>
+  <line no="22">
+    <token name="T_DOC_COMMENT"> * case the form is trivial and we could build it inside the controller, a good</token>
+  </line>
+  <line no="23">
+    <token name="T_DOC_COMMENT"> * practice is to always define your forms as classes.</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT"> * See https://symfony.com/doc/current/book/forms.html#creating-form-classes</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="27">
+    <token name="T_DOC_COMMENT"> * @author Ryan Weaver &lt;weaverryan@gmail.com&gt;</token>
+  </line>
+  <line no="28">
+    <token name="T_DOC_COMMENT"> * @author Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</token>
+  </line>
+  <line no="29">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="30">
+    <token name="T_CLASS">class</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">CommentType</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_EXTENDS">extends</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">AbstractType</token>
+  </line>
+  <line no="31">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="32">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="33">
+    <token name="T_DOC_COMMENT">     * {@inheritdoc}</token>
+  </line>
+  <line no="34">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">buildForm</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">FormBuilderInterface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$builder</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ARRAY">array</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$options</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="37">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// By default, form fields include the 'required' attribute, which enables</token>
+  </line>
+  <line no="38">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// the client-side form validation. This means that you can't test the</token>
+  </line>
+  <line no="39">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// server-side validation errors from the browser. To temporarily disable</token>
+  </line>
+  <line no="40">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// this validation, set the 'required' attribute to 'false':</token>
+  </line>
+  <line no="41">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_COMMENT">// $builder-&gt;add('content', null, ['required' =&gt; false]);</token>
+  </line>
+  <line no="42"/>
+  <line no="43">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$builder</token>
+  </line>
+  <line no="44">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">add</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'content'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">TextareaType</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_CLASS">class</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+  </line>
+  <line no="45">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'help'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'help.comment_content'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="46">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="47">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="48">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="49"/>
+  <line no="50">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="51">
+    <token name="T_DOC_COMMENT">     * {@inheritdoc}</token>
+  </line>
+  <line no="52">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="53">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">configureOptions</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">OptionsResolver</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$resolver</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="54">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="55">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$resolver</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setDefaults</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+  </line>
+  <line no="56">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'data_class'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Comment</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_CLASS">class</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+  </line>
+  <line no="57">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="58">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="59">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="60"/>
+</source>

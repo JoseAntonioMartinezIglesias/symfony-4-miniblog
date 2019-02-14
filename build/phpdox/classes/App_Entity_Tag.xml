@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Entity\Tag" namespace="App\Entity" name="Tag" abstract="false" final="false" start="26" end="75">
+  <file path="../src/Entity" file="Tag.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/Tag.php" size="1595" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="5f07228f89e011f3fe2b128ae8babe9fd8139080" relative="Entity/Tag.php"/>
+  <docblock>
+    <description/>
+    <orm value="\Entity()"/>
+    <orm value="\Table(name=&quot;symfony_demo_tag&quot;) Defines the properties of the Tag entity to represent the post tags.  See https://symfony.com/doc/current/book/doctrine.html#creating-an-entity-class"/>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <implements full="JsonSerializable" namespace="" name="JsonSerializable"/>
+  <member name="id" visibility="private" static="false" line="35">
+    <docblock>
+      <description/>
+      <var type="int"/>
+      <orm value="\Id"/>
+      <orm value="\GeneratedValue"/>
+      <orm value="\Column(type=&quot;integer&quot;)"/>
+    </docblock>
+  </member>
+  <member name="name" visibility="private" static="false" line="42">
+    <docblock>
+      <description/>
+      <var type="string"/>
+      <orm value="\Column(type=&quot;string&quot;, unique=true)"/>
+    </docblock>
+  </member>
+  <method name="getId" start="44" end="47" abstract="false" final="false" static="false" visibility="public">
+    <return type="int" nullable="false"/>
+  </method>
+  <method name="setName" start="49" end="52" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="name" byreference="false" type="string"/>
+  </method>
+  <method name="getName" start="54" end="57" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="jsonSerialize" start="62" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <inline>
+      <comment value="This entity implements JsonSerializable (http://php.net/manual/en/class.jsonserializable.php)" line="64"/>
+      <comment value="so this method is used to customize its JSON representation when json_encode()" line="65"/>
+      <comment value="is called, for example in tags|json_encode (app/Resources/views/form/fields.html.twig)" line="66"/>
+    </inline>
+  </method>
+  <method name="__toString" start="71" end="74" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="false"/>
+  </method>
+  <interface full="JsonSerializable" namespace="" name="JsonSerializable">
+    <method name="jsonSerialize" abstract="false" static="false" visibility="public" final="false">
+    <docblock>
+      <description compact="Specify data which should be serialized to JSON"/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  </interface>
+</class>

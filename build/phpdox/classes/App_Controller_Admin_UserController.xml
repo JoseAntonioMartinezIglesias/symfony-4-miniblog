@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\Admin\UserController" namespace="App\Controller\Admin" name="UserController" abstract="false" final="false" start="22" end="38">
+  <file path="../src/Controller/Admin" file="UserController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/UserController.php" size="1155" time="2019-02-14T08:42:17+00:00" unixtime="1550133737" sha1="d49b69d020b7a1329b752f3461f8cabe29b2286d" relative="Controller/Admin/UserController.php"/>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="index" start="27" end="36" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/&quot;, methods={&quot;GET&quot;}, name=&quot;admin_user_index&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <inline>
+      <comment value="$authorPosts = $posts-&gt;findBy(['author' =&gt; $this-&gt;getUser()], ['publishedAt' =&gt; 'DESC']);" line="34"/>
+      <comment value="return $this-&gt;render('admin/blog/index.html.twig', ['posts' =&gt; $authorPosts]);" line="35"/>
+    </inline>
+  </method>
+</class>

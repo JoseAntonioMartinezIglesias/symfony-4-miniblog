@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Command\DeleteUserCommand" namespace="App\Command" name="DeleteUserCommand" abstract="false" final="false" start="42" end="132">
+  <file path="../src/Command" file="DeleteUserCommand.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/DeleteUserCommand.php" size="4447" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="37b94090d172ba1e8931d63ca9cf4cb9977c41ba" relative="Command/DeleteUserCommand.php"/>
+  <docblock>
+    <description compact="A console command that deletes users from the database.">To use this command, open a terminal window, enter into your project
+directory and execute the following:
+
+    $ php bin/console app:delete-user
+
+Check out the code of the src/App/Command/AddUserCommand.php file for
+the full explanation about Symfony commands.
+
+See https://symfony.com/doc/current/cookbook/console/console_command.html
+For more advanced uses, commands can be defined as services too. See
+https://symfony.com/doc/current/console/commands_as_services.html</description>
+    <author value="Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Console\Command\Command" namespace="Symfony\Component\Console\Command" name="Command" unresolved="true"/>
+  <member name="defaultName" default="'app:delete-user'" type="string" visibility="protected" static="true" line="44"/>
+  <member name="io" visibility="private" static="false" line="47">
+    <docblock>
+      <var type="object">
+        <type full="Symfony\Component\Console\Style\SymfonyStyle" namespace="Symfony\Component\Console\Style" name="SymfonyStyle"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="entityManager" visibility="private" static="false" line="48"/>
+  <member name="validator" visibility="private" static="false" line="49"/>
+  <member name="users" visibility="private" static="false" line="50"/>
+  <constructor name="__construct" start="52" end="59" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="em" byreference="false" type="object">
+      <type full="Doctrine\ORM\EntityManagerInterface" namespace="Doctrine\ORM" name="EntityManagerInterface"/>
+    </parameter>
+    <parameter name="validator" byreference="false" type="object">
+      <type full="App\Utils\Validator" namespace="App\Utils" name="Validator"/>
+    </parameter>
+    <parameter name="users" byreference="false" type="object">
+      <type full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository"/>
+    </parameter>
+  </constructor>
+  <method name="configure" start="64" end="80" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+  </method>
+  <method name="initialize" start="82" end="88" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="SymfonyStyle is an optional feature that Symfony provides so you can" line="84"/>
+      <comment value="apply a consistent look to the commands of your application." line="85"/>
+      <comment value="See https://symfony.com/doc/current/console/style.html" line="86"/>
+    </inline>
+  </method>
+  <method name="interact" start="90" end="109" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+  </method>
+  <method name="execute" start="111" end="131" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="After an entity has been removed its in-memory state is the same" line="122"/>
+      <comment value="as before the removal, except for generated identifiers." line="123"/>
+      <comment value="See http://docs.doctrine-project.org/en/latest/reference/working-with-objects.html#removing-entities" line="124"/>
+    </inline>
+  </method>
+</class>

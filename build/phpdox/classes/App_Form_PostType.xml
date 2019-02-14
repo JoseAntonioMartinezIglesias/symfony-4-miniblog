@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Form\PostType" namespace="App\Form" name="PostType" abstract="false" final="false" start="29" end="79">
+  <file path="../src/Form" file="PostType.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Form/PostType.php" size="2510" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2307245ee65aadcdbdead3e661ed33d6da36cb5e" relative="Form/PostType.php"/>
+  <docblock>
+    <description compact="Defines the form used to create and manipulate blog posts."/>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Form\AbstractType" namespace="Symfony\Component\Form" name="AbstractType" unresolved="true"/>
+  <method name="buildForm" start="34" end="68" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="builder" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormBuilderInterface" namespace="Symfony\Component\Form" name="FormBuilderInterface"/>
+    </parameter>
+    <parameter name="options" byreference="false" type="array"/>
+    <inline>
+      <comment value="For the full reference of options defined by each form field type" line="36"/>
+      <comment value="see https://symfony.com/doc/current/reference/forms/types.html" line="37"/>
+      <comment value="By default, form fields include the 'required' attribute, which enables" line="39"/>
+      <comment value="the client-side form validation. This means that you can't test the" line="40"/>
+      <comment value="server-side validation errors from the browser. To temporarily disable" line="41"/>
+      <comment value="this validation, set the 'required' attribute to 'false':" line="42"/>
+      <comment value="$builder-&gt;add('title', null, ['required' =&gt; false, ...]);" line="43"/>
+    </inline>
+  </method>
+  <method name="configureOptions" start="73" end="78" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="resolver" byreference="false" type="object">
+      <type full="Symfony\Component\OptionsResolver\OptionsResolver" namespace="Symfony\Component\OptionsResolver" name="OptionsResolver"/>
+    </parameter>
+  </method>
+</class>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\BlogController" namespace="App\Controller" name="BlogController" abstract="false" final="false" start="38" end="174">
+  <file path="../src/Controller" file="BlogController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/BlogController.php" size="7228" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="edaba7c50861306e0f753b9eabb184bbb2e9d373" relative="Controller/BlogController.php"/>
+  <docblock>
+    <description compact="Controller used to manage blog contents in the public part of the site."/>
+    <route value="(&quot;/blog&quot;)"/>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="index" start="50" end="62" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/&quot;, defaults={&quot;page&quot;: &quot;1&quot;, &quot;_format&quot;=&quot;html&quot;}, methods={&quot;GET&quot;}, name=&quot;blog_index&quot;)"/>
+      <route value="(&quot;/rss.xml&quot;, defaults={&quot;page&quot;: &quot;1&quot;, &quot;_format&quot;=&quot;xml&quot;}, methods={&quot;GET&quot;}, name=&quot;blog_rss&quot;)"/>
+      <route value="(&quot;/page/{page&lt;[1-9]\d*&gt;}&quot;, defaults={&quot;_format&quot;=&quot;html&quot;}, methods={&quot;GET&quot;}, name=&quot;blog_index_paginated&quot;)"/>
+      <cache value="(smaxage=&quot;10&quot;) NOTE: For standard formats, Symfony will also automatically choose the best Content-Type header for the response. See https://symfony.com/doc/current/quick_tour/the_controller.html#using-formats"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="page" byreference="false" type="int"/>
+    <parameter name="_format" byreference="false" type="string"/>
+    <parameter name="posts" byreference="false" type="object">
+      <type full="App\Repository\PostRepository" namespace="App\Repository" name="PostRepository"/>
+    </parameter>
+    <parameter name="tags" byreference="false" type="object">
+      <type full="App\Repository\TagRepository" namespace="App\Repository" name="TagRepository"/>
+    </parameter>
+    <inline>
+      <comment value="Every template name also has two extensions that specify the format and" line="58"/>
+      <comment value="engine for that template." line="59"/>
+      <comment value="See https://symfony.com/doc/current/templating.html#template-suffix" line="60"/>
+    </inline>
+  </method>
+  <method name="postShow" start="72" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/posts/{slug}&quot;, methods={&quot;GET&quot;}, name=&quot;blog_post&quot;) NOTE: The $post controller argument is automatically injected by Symfony after performing a database query looking for a Post with the 'slug' value given in the route. See https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="post" byreference="false" type="object">
+      <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
+    </parameter>
+    <inline>
+      <comment value="Symfony's 'dump()' function is an improved version of PHP's 'var_dump()' but" line="74"/>
+      <comment value="it's not available in the 'prod' environment to prevent leaking sensitive information." line="75"/>
+      <comment value="It can be used both in PHP files and Twig templates, but it requires to" line="76"/>
+      <comment value="have enabled the DebugBundle. Uncomment the following line to see it in action:" line="77"/>
+      <comment value="dump($post, $this-&gt;getUser(), new \DateTime());" line="79"/>
+    </inline>
+  </method>
+  <method name="commentNew" start="93" end="128" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/comment/{postSlug}/new&quot;, methods={&quot;POST&quot;}, name=&quot;comment_new&quot;)"/>
+      <isgranted value="(&quot;IS_AUTHENTICATED_FULLY&quot;)"/>
+      <paramconverter value="(&quot;post&quot;, options={&quot;mapping&quot;: {&quot;postSlug&quot;: &quot;slug&quot;}}) NOTE: The ParamConverter mapping is required because the route parameter (postSlug) doesn't match any of the Doctrine entity properties (slug). See https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html#doctrine-converter"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="post" byreference="false" type="object">
+      <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
+    </parameter>
+    <parameter name="eventDispatcher" byreference="false" type="object">
+      <type full="Symfony\Component\EventDispatcher\EventDispatcherInterface" namespace="Symfony\Component\EventDispatcher" name="EventDispatcherInterface"/>
+    </parameter>
+  </method>
+  <method name="commentForm" start="138" end="146" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This controller is called directly via the render() function in the blog/post_show.html.twig template. That's why it's not needed to define a route name for it.">The "id" of the Post is passed in and then turned into a Post object
+automatically by the ParamConverter.</description>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="post" byreference="false" type="object">
+      <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
+    </parameter>
+  </method>
+  <method name="search" start="151" end="173" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/search&quot;, methods={&quot;GET&quot;}, name=&quot;blog_search&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="posts" byreference="false" type="object">
+      <type full="App\Repository\PostRepository" namespace="App\Repository" name="PostRepository"/>
+    </parameter>
+  </method>
+</class>

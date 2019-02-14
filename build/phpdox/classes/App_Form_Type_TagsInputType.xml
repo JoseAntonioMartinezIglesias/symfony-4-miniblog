@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Form\Type\TagsInputType" namespace="App\Form\Type" name="TagsInputType" abstract="false" final="false" start="31" end="70">
+  <file path="../src/Form/Type" file="TagsInputType.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Form/Type/TagsInputType.php" size="2049" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c5bd7243e93ed092417e4ecddfd5dfe55e003255" relative="Form/Type/TagsInputType.php"/>
+  <docblock>
+    <description compact="Defines the custom form field type used to manipulate tags values across Bootstrap-tagsinput javascript plugin.">See https://symfony.com/doc/current/cookbook/form/create_custom_field_type.html</description>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Form\AbstractType" namespace="Symfony\Component\Form" name="AbstractType" unresolved="true"/>
+  <member name="tags" visibility="private" static="false" line="33"/>
+  <constructor name="__construct" start="35" end="38" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="tags" byreference="false" type="object">
+      <type full="App\Repository\TagRepository" namespace="App\Repository" name="TagRepository"/>
+    </parameter>
+  </constructor>
+  <method name="buildForm" start="43" end="53" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="builder" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormBuilderInterface" namespace="Symfony\Component\Form" name="FormBuilderInterface"/>
+    </parameter>
+    <parameter name="options" byreference="false" type="array"/>
+  </method>
+  <method name="buildView" start="58" end="61" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="view" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormView" namespace="Symfony\Component\Form" name="FormView"/>
+    </parameter>
+    <parameter name="form" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormInterface" namespace="Symfony\Component\Form" name="FormInterface"/>
+    </parameter>
+    <parameter name="options" byreference="false" type="array"/>
+  </method>
+  <method name="getParent" start="66" end="69" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+  </method>
+</class>

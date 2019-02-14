@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - App\EventSubscriber\CommentNotificationSubscriber</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#App_EventSubscriber">App\EventSubscriber</a>
+          </li>
+          <li class="separator">CommentNotificationSubscriber</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/EventSubscriber/CommentNotificationSubscriber.php.html#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>App\EventSubscriber\</small>CommentNotificationSubscriber</h1>
+        <h4>Notifies post's author about new comments.</h4>
+        <p/>
+        <ul>
+          <li>Author: Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class CommentNotificationSubscriber
+                implements
+                EventSubscriberInterface
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$mailer</a>;
+                    </li><li>private  <a href="#members">$translator</a>;
+                    </li><li>private  <a href="#members">$urlGenerator</a>;
+                    </li><li>private  <a href="#members">$sender</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/__construct.html">__construct</a>()
+                    </li><li>public static array <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/getSubscribedEvents.html">getSubscribedEvents</a>()
+                    </li><li>public void <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/onCommentCreated.html">onCommentCreated</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>Symfony\Component\EventDispatcher\EventSubscriberInterface</li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">33</td>
+              <td>133</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 133 characters</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="mailer">
+              <strong>$mailer</strong>
+            </li>
+            <li id="sender">
+              <strong>$sender</strong>
+            </li>
+            <li id="translator">
+              <strong>$translator</strong>
+            </li>
+            <li id="urlGenerator">
+              <strong>$urlGenerator</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/__construct.html">__construct()</a>
+            </li>
+            <li id="getSubscribedEvents">
+              <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/getSubscribedEvents.html">getSubscribedEvents()</a>
+            </li>
+            <li id="onCommentCreated">
+              <a title="App\EventSubscriber\CommentNotificationSubscriber" href="../classes/App_EventSubscriber_CommentNotificationSubscriber/onCommentCreated.html">onCommentCreated()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2019-01-14T18:46:33+00:00 (commit #<span title="e02024489c297657daf5fa09fead682339f5212a">e020244</span>)</h3>
+            <div>
+              <p>
+                        Author: Jose Antonio Martinez Iglesias (jositoyoyo@jose-antonio-martinez) /
+                        Commiter: Jose Antonio Martinez Iglesias (jositoyoyo@jose-antonio-martinez)
+                    </p>
+              <pre class="wrapped">Primer commit</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

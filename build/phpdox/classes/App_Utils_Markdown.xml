@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Utils\Markdown" namespace="App\Utils" name="Markdown" abstract="false" final="false" start="22" end="44">
+  <file path="../src/Utils" file="Markdown.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Markdown.php" size="1157" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2efe752678bf5cd5c7eb2275227fc01b74aad340" relative="Utils/Markdown.php"/>
+  <docblock>
+    <description compact="This class is a light interface between an external Markdown parser library and the application. It's generally recommended to create these light interfaces to decouple your application from the implementation details of the third-party library."/>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <member name="parser" visibility="private" static="false" line="24"/>
+  <member name="purifier" visibility="private" static="false" line="25"/>
+  <constructor name="__construct" start="27" end="35" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="toHtml" start="37" end="43" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="false"/>
+    <parameter name="text" byreference="false" type="string"/>
+  </method>
+</class>

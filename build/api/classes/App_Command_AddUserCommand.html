@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - App\Command\AddUserCommand</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#App_Command">App\Command</a>
+          </li>
+          <li class="separator">AddUserCommand</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Command/AddUserCommand.php.html#line47">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>App\Command\</small>AddUserCommand</h1>
+        <h4>A console command that creates users and stores them in the database.</h4>
+        <p>To use this command, open a terminal window, enter into your project<br/>directory and execute the following:<br/><br/>$ php bin/console app:add-user<br/><br/>To output detailed information, increase the command verbosity:<br/><br/>$ php bin/console app:add-user -vv<br/><br/>See https://symfony.com/doc/current/cookbook/console/console_command.html<br/>For more advanced uses, commands can be defined as services too. See<br/>https://symfony.com/doc/current/console/commands_as_services.html</p>
+        <ul>
+          <li>Author: Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AddUserCommand
+                extends Command
+            {<br/><ul class="none"><li>// members</li><li>protected static string <a href="#members">$defaultName</a> =
+                        'app:add-user';
+                    </li><li>private <span title="Symfony\Component\Console\Style\SymfonyStyle">SymfonyStyle</span> <a href="#members">$io</a>;
+                    </li><li>private  <a href="#members">$entityManager</a>;
+                    </li><li>private  <a href="#members">$passwordEncoder</a>;
+                    </li><li>private  <a href="#members">$validator</a>;
+                    </li><li>private  <a href="#members">$users</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/__construct.html">__construct</a>()
+                    </li><li>protected void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/configure.html">configure</a>()
+                    </li><li>protected void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/initialize.html">initialize</a>()
+                    </li><li>protected void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/interact.html">interact</a>()
+                    </li><li>protected void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/execute.html">execute</a>()
+                    </li><li>private void <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/validateUserData.html">validateUserData</a>()
+                    </li><li>private string <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/getCommandHelp.html">getCommandHelp</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>Symfony\Component\Console\Command\Command</li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">113</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$output'.</td>
+            </tr>
+          </table>
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">63</td>
+              <td>143</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 143 characters</td>
+            </tr>
+            <tr>
+              <td class="line">115</td>
+              <td>185</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 185 characters</td>
+            </tr>
+            <tr>
+              <td class="line">143</td>
+              <td>124</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 124 characters</td>
+            </tr>
+            <tr>
+              <td class="line">198</td>
+              <td>159</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 159 characters</td>
+            </tr>
+            <tr>
+              <td class="line">202</td>
+              <td>193</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 193 characters</td>
+            </tr>
+            <tr>
+              <td class="line">212</td>
+              <td>121</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 121 characters</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="entityManager">
+              <strong>$entityManager</strong>
+            </li>
+            <li id="io"><strong>$io</strong>
+                —
+                <a title="Symfony\Component\Console\Style\SymfonyStyle" href="../classes/Symfony_Component_Console_Style_SymfonyStyle.html">Symfony\Component\Console\Style\SymfonyStyle</a></li>
+            <li id="passwordEncoder">
+              <strong>$passwordEncoder</strong>
+            </li>
+            <li id="users">
+              <strong>$users</strong>
+            </li>
+            <li id="validator">
+              <strong>$validator</strong>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="defaultName">
+              <strong>$defaultName</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getCommandHelp"><a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/getCommandHelp.html">getCommandHelp()</a>
+                — The command help is usually included in the configure() method, but when it's too long, it's better to define a separate method to maintain the code readability.</li>
+            <li id="validateUserData">
+              <a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/validateUserData.html">validateUserData()</a>
+            </li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="configure"><a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/configure.html">configure()</a>
+                — {@inheritdoc}</li>
+            <li id="execute"><a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/execute.html">execute()</a>
+                — This method is executed after interact() and initialize(). It usually contains the logic to execute to complete this command task.</li>
+            <li id="initialize"><a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/initialize.html">initialize()</a>
+                — This optional method is the first one executed for a command after configure() and is useful to initialize properties based on the input arguments and options.</li>
+            <li id="interact"><a title="App\Command\AddUserCommand" href="../classes/App_Command_AddUserCommand/interact.html">interact()</a>
+                — This method is executed after initialize() and before execute(). Its purpose is to check if some of the options/arguments are missing and interactively ask the user for those values.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2019-01-14T18:46:33+00:00 (commit #<span title="e02024489c297657daf5fa09fead682339f5212a">e020244</span>)</h3>
+            <div>
+              <p>
+                        Author: Jose Antonio Martinez Iglesias (jositoyoyo@jose-antonio-martinez) /
+                        Commiter: Jose Antonio Martinez Iglesias (jositoyoyo@jose-antonio-martinez)
+                    </p>
+              <pre class="wrapped">Primer commit</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

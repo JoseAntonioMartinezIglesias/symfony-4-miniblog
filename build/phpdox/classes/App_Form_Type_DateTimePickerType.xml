@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Form\Type\DateTimePickerType" namespace="App\Form\Type" name="DateTimePickerType" abstract="false" final="false" start="29" end="67">
+  <file path="../src/Form/Type" file="DateTimePickerType.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Form/Type/DateTimePickerType.php" size="1881" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="6faa17b1c65a0707eea78e91d02f94df3f0e2d2a" relative="Form/Type/DateTimePickerType.php"/>
+  <docblock>
+    <description compact="Defines the custom form field type used to manipulate datetime values across Bootstrap Date\Time Picker javascript plugin.">See https://symfony.com/doc/current/cookbook/form/create_custom_field_type.html</description>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Form\AbstractType" namespace="Symfony\Component\Form" name="AbstractType" unresolved="true"/>
+  <member name="formatConverter" visibility="private" static="false" line="31"/>
+  <constructor name="__construct" start="33" end="36" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="converter" byreference="false" type="object">
+      <type full="App\Utils\MomentFormatConverter" namespace="App\Utils" name="MomentFormatConverter"/>
+    </parameter>
+  </constructor>
+  <method name="buildView" start="41" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="view" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormView" namespace="Symfony\Component\Form" name="FormView"/>
+    </parameter>
+    <parameter name="form" byreference="false" type="object">
+      <type full="Symfony\Component\Form\FormInterface" namespace="Symfony\Component\Form" name="FormInterface"/>
+    </parameter>
+    <parameter name="options" byreference="false" type="array"/>
+  </method>
+  <method name="configureOptions" start="50" end="58" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <parameter name="resolver" byreference="false" type="object">
+      <type full="Symfony\Component\OptionsResolver\OptionsResolver" namespace="Symfony\Component\OptionsResolver" name="OptionsResolver"/>
+    </parameter>
+  </method>
+  <method name="getParent" start="63" end="66" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+  </method>
+</class>

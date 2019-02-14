@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pmd version="@project.version@" timestamp="2019-02-14T22:19:16+01:00">
+  <file name="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/AddUserCommand.php">
+    <violation beginline="113" endline="113" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+  </file>
+  <file name="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/DeleteUserCommand.php">
+    <violation beginline="90" endline="90" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+    <violation beginline="111" endline="111" rule="UnusedFormalParameter" ruleset="Unused Code Rules" externalInfoUrl="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" priority="3">
+      Avoid unused parameters such as '$output'.
+    </violation>
+  </file>
+  <error filename="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/DataFixtures/AppFixtures.php" msg="Unexpected token: [, line: 41, col: 42, file: /var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/DataFixtures/AppFixtures.php." />
+  <error filename="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/Post.php" msg="Unexpected token: const, line: 42, col: 12, file: /var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/Post.php." />
+  <error filename="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Security/PostVoter.php" msg="Unexpected token: const, line: 31, col: 13, file: /var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Security/PostVoter.php." />
+</pmd>

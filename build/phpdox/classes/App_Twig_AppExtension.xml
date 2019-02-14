@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Twig\AppExtension" namespace="App\Twig" name="AppExtension" abstract="false" final="false" start="30" end="88">
+  <file path="../src/Twig" file="AppExtension.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Twig/AppExtension.php" size="2282" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c37d4acf1ad23e4033baef2f12444b009bedd83f" relative="Twig/AppExtension.php"/>
+  <docblock>
+    <description compact="This Twig extension adds a new 'md2html' filter to easily transform Markdown contents into HTML contents inside Twig templates.">See https://symfony.com/doc/current/cookbook/templating/twig_extension.html</description>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+    <author value="Julien ITARD &lt;julienitard@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Twig\Extension\AbstractExtension" namespace="Twig\Extension" name="AbstractExtension" unresolved="true"/>
+  <member name="parser" visibility="private" static="false" line="32"/>
+  <member name="localeCodes" visibility="private" static="false" line="33"/>
+  <member name="locales" visibility="private" static="false" line="34"/>
+  <constructor name="__construct" start="36" end="40" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="parser" byreference="false" type="object">
+      <type full="App\Utils\Markdown" namespace="App\Utils" name="Markdown"/>
+    </parameter>
+    <parameter name="locales" byreference="false" type="string"/>
+  </constructor>
+  <method name="getFilters" start="45" end="50" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="getFunctions" start="55" end="60" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="markdownToHtml" start="65" end="68" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Transforms the given Markdown content into HTML content."/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="content" byreference="false" type="string"/>
+  </method>
+  <method name="getLocales" start="75" end="87" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Takes the list of codes of the locales (languages) enabled in the application and returns an array with the name of each locale written in its own language (e.g. English, Français, Español, etc.)."/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+</class>

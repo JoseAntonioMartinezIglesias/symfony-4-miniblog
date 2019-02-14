@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Entity\Post" namespace="App\Entity" name="Post" abstract="false" final="false" start="34" end="233">
+  <file path="../src/Entity" file="Post.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/Post.php" size="5227" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="8635a5beb28ac49a088f11c0ba88bf85adfd1cf4" relative="Entity/Post.php"/>
+  <docblock>
+    <description/>
+    <orm value="\Entity(repositoryClass=&quot;App\Repository\PostRepository&quot;)"/>
+    <orm value="\Table(name=&quot;symfony_demo_post&quot;) Defines the properties of the Post entity to represent the blog posts.  See https://symfony.com/doc/current/book/doctrine.html#creating-an-entity-class  Tip: if you have an existing database, you can generate these entity class automatically. See https://symfony.com/doc/current/cookbook/doctrine/reverse_engineering.html"/>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+  </docblock>
+  <constant type="integer" name="NUM_ITEMS" value="10">
+    <docblock>
+      <description compact="Use constants to define configuration options that rarely change instead of specifying them under parameters section in config/services.yaml file.">See https://symfony.com/doc/current/best_practices/configuration.html#constants-vs-configuration-options</description>
+    </docblock>
+  </constant>
+  <member name="id" visibility="private" static="false" line="51">
+    <docblock>
+      <description/>
+      <var type="int"/>
+      <orm value="\Id"/>
+      <orm value="\GeneratedValue"/>
+      <orm value="\Column(type=&quot;integer&quot;)"/>
+    </docblock>
+  </member>
+  <member name="title" visibility="private" static="false" line="59">
+    <docblock>
+      <description/>
+      <var type="string"/>
+      <orm value="\Column(type=&quot;string&quot;)"/>
+      <assert value="\NotBlank"/>
+    </docblock>
+  </member>
+  <member name="slug" visibility="private" static="false" line="66">
+    <docblock>
+      <description/>
+      <var type="string"/>
+      <orm value="\Column(type=&quot;string&quot;)"/>
+    </docblock>
+  </member>
+  <member name="summary" visibility="private" static="false" line="75">
+    <docblock>
+      <description/>
+      <var type="string"/>
+      <orm value="\Column(type=&quot;string&quot;)"/>
+      <assert value="\NotBlank(message=&quot;post.blank_summary&quot;)"/>
+      <assert value="\Length(max=255)"/>
+    </docblock>
+  </member>
+  <member name="content" visibility="private" static="false" line="84">
+    <docblock>
+      <description/>
+      <var type="string"/>
+      <orm value="\Column(type=&quot;text&quot;)"/>
+      <assert value="\NotBlank(message=&quot;post.blank_content&quot;)"/>
+      <assert value="\Length(min=10, minMessage=&quot;post.too_short_content&quot;)"/>
+    </docblock>
+  </member>
+  <member name="publishedAt" visibility="private" static="false" line="91">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="\DateTime" namespace="" name="DateTime"/>
+      </var>
+      <orm value="\Column(type=&quot;datetime&quot;)"/>
+    </docblock>
+  </member>
+  <member name="author" visibility="private" static="false" line="99">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="App\Entity\User" namespace="App\Entity" name="User"/>
+      </var>
+      <orm value="\ManyToOne(targetEntity=&quot;App\Entity\User&quot;)"/>
+      <orm value="\JoinColumn(nullable=false)"/>
+    </docblock>
+  </member>
+  <member name="comments" visibility="private" static="false" line="112">
+    <docblock>
+      <description/>
+      <var type="array" of="object">
+        <type full="App\Entity\Comment[]|ArrayCollecti" namespace="App\Entity" name="Comment[]|ArrayCollecti"/>
+      </var>
+      <orm value="\OneToMany( targetEntity=&quot;Comment&quot;, mappedBy=&quot;post&quot;, orphanRemoval=true, cascade={&quot;persist&quot;} )"/>
+      <orm value="\OrderBy({&quot;publishedAt&quot;: &quot;DESC&quot;})"/>
+    </docblock>
+  </member>
+  <member name="tags" visibility="private" static="false" line="122">
+    <docblock>
+      <description/>
+      <var type="array" of="object">
+        <type full="App\Entity\Tag[]|ArrayCollecti" namespace="App\Entity" name="Tag[]|ArrayCollecti"/>
+      </var>
+      <orm value="\ManyToMany(targetEntity=&quot;App\Entity\Tag&quot;, cascade={&quot;persist&quot;})"/>
+      <orm value="\JoinTable(name=&quot;symfony_demo_post_tag&quot;)"/>
+      <orm value="\OrderBy({&quot;name&quot;: &quot;ASC&quot;})"/>
+      <assert value="\Count(max=&quot;4&quot;, maxMessage=&quot;post.too_many_tags&quot;)"/>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="124" end="129" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getId" start="131" end="134" abstract="false" final="false" static="false" visibility="public">
+    <return type="int" nullable="false"/>
+  </method>
+  <method name="getTitle" start="136" end="139" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="true"/>
+  </method>
+  <method name="setTitle" start="141" end="144" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="title" byreference="false" nullable="true" type="string"/>
+  </method>
+  <method name="getSlug" start="146" end="149" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="true"/>
+  </method>
+  <method name="setSlug" start="151" end="154" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="slug" byreference="false" nullable="true" type="string"/>
+  </method>
+  <method name="getContent" start="156" end="159" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="true"/>
+  </method>
+  <method name="setContent" start="161" end="164" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="content" byreference="false" nullable="true" type="string"/>
+  </method>
+  <method name="getPublishedAt" start="166" end="169" abstract="false" final="false" static="false" visibility="public">
+    <return type="object" nullable="false">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </return>
+  </method>
+  <method name="setPublishedAt" start="171" end="174" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="publishedAt" byreference="false" nullable="true" type="object">
+      <type full="DateTime" namespace="" name="DateTime"/>
+    </parameter>
+  </method>
+  <method name="getAuthor" start="176" end="179" abstract="false" final="false" static="false" visibility="public">
+    <return type="object" nullable="false">
+      <type full="App\Entity\User" namespace="App\Entity" name="User"/>
+    </return>
+  </method>
+  <method name="setAuthor" start="181" end="184" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="author" byreference="false" nullable="true" type="object">
+      <type full="App\Entity\User" namespace="App\Entity" name="User"/>
+    </parameter>
+  </method>
+  <method name="getComments" start="186" end="189" abstract="false" final="false" static="false" visibility="public">
+    <return type="object" nullable="false">
+      <type full="Doctrine\Common\Collections\Collection" namespace="Doctrine\Common\Collections" name="Collection"/>
+    </return>
+  </method>
+  <method name="addComment" start="191" end="197" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="comment" byreference="false" nullable="true" type="object">
+      <type full="App\Entity\Comment" namespace="App\Entity" name="Comment"/>
+    </parameter>
+  </method>
+  <method name="removeComment" start="199" end="203" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="comment" byreference="false" type="object">
+      <type full="App\Entity\Comment" namespace="App\Entity" name="Comment"/>
+    </parameter>
+  </method>
+  <method name="getSummary" start="205" end="208" abstract="false" final="false" static="false" visibility="public">
+    <return type="string" nullable="true"/>
+  </method>
+  <method name="setSummary" start="210" end="213" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="summary" byreference="false" nullable="true" type="string"/>
+  </method>
+  <method name="addTag" start="215" end="222" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="tags" byreference="false" nullable="true" type="object">
+      <type full="App\Entity\Tag" namespace="App\Entity" name="Tag"/>
+    </parameter>
+  </method>
+  <method name="removeTag" start="224" end="227" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="tag" byreference="false" type="object">
+      <type full="App\Entity\Tag" namespace="App\Entity" name="Tag"/>
+    </parameter>
+  </method>
+  <method name="getTags" start="229" end="232" abstract="false" final="false" static="false" visibility="public">
+    <return type="object" nullable="false">
+      <type full="Doctrine\Common\Collections\Collection" namespace="Doctrine\Common\Collections" name="Collection"/>
+    </return>
+  </method>
+</class>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Form\DataTransformer\TagArrayToStringTransformer" namespace="App\Form\DataTransformer" name="TagArrayToStringTransformer" abstract="false" final="false" start="27" end="78">
+  <file path="../src/Form/DataTransformer" file="TagArrayToStringTransformer.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Form/DataTransformer/TagArrayToStringTransformer.php" size="2405" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="78a7cdf1eb7021bf516a5e10b54c6a7dcfb1e7f2" relative="Form/DataTransformer/TagArrayToStringTransformer.php"/>
+  <docblock>
+    <description compact="This data transformer is used to translate the array of tags into a comma separated format that can be displayed and managed by Bootstrap-tagsinput js plugin (and back on submit).">See https://symfony.com/doc/current/form/data_transformers.html</description>
+    <author value="Yonel Ceruto &lt;yonelceruto@gmail.com&gt;"/>
+    <author value="Jonathan Boyer &lt;contact@grafikart.fr&gt;"/>
+  </docblock>
+  <implements full="Symfony\Component\Form\DataTransformerInterface" namespace="Symfony\Component\Form" name="DataTransformerInterface" unresolved="true"/>
+  <member name="tags" visibility="private" static="false" line="29"/>
+  <constructor name="__construct" start="31" end="34" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="tags" byreference="false" type="object">
+      <type full="App\Repository\TagRepository" namespace="App\Repository" name="TagRepository"/>
+    </parameter>
+  </constructor>
+  <method name="transform" start="39" end="47" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="tags" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="The value received is an array of Tag objects generated with" line="41"/>
+      <comment value="Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer::transform()" line="42"/>
+      <comment value="The value returned is a string that concatenates the string representation of those objects" line="43"/>
+    </inline>
+  </method>
+  <method name="reverseTransform" start="52" end="77" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Get the current tags and find the new ones that should be created." line="60"/>
+      <comment value="Return an array of tags to transform them back into a Doctrine Collection." line="74"/>
+      <comment value="See Symfony\Bridge\Doctrine\Form\DataTransformer\CollectionToArrayTransformer::reverseTransform()" line="75"/>
+    </inline>
+  </method>
+</class>

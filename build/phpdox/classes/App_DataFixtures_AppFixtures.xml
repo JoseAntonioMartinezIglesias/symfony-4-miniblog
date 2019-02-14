@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\DataFixtures\AppFixtures" namespace="App\DataFixtures" name="AppFixtures" abstract="false" final="false" start="23" end="237">
+  <file path="../src/DataFixtures" file="AppFixtures.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/DataFixtures/AppFixtures.php" size="8523" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="ca2bcb9df2da5a567f12ebc8aa578eb082e5f58e" relative="DataFixtures/AppFixtures.php"/>
+  <extends full="Doctrine\Bundle\FixturesBundle\Fixture" namespace="Doctrine\Bundle\FixturesBundle" name="Fixture" unresolved="true"/>
+  <member name="passwordEncoder" visibility="private" static="false" line="25"/>
+  <constructor name="__construct" start="27" end="30" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="passwordEncoder" byreference="false" type="object">
+      <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
+    </parameter>
+  </constructor>
+  <method name="load" start="32" end="37" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="manager" byreference="false" type="object">
+      <type full="Doctrine\Common\Persistence\ObjectManager" namespace="Doctrine\Common\Persistence" name="ObjectManager"/>
+    </parameter>
+  </method>
+  <method name="loadUsers" start="39" end="54" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="manager" byreference="false" type="object">
+      <type full="Doctrine\Common\Persistence\ObjectManager" namespace="Doctrine\Common\Persistence" name="ObjectManager"/>
+    </parameter>
+  </method>
+  <method name="loadTags" start="56" end="67" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="manager" byreference="false" type="object">
+      <type full="Doctrine\Common\Persistence\ObjectManager" namespace="Doctrine\Common\Persistence" name="ObjectManager"/>
+    </parameter>
+  </method>
+  <method name="loadPosts" start="69" end="94" abstract="false" final="false" static="false" visibility="private">
+    <parameter name="manager" byreference="false" type="object">
+      <type full="Doctrine\Common\Persistence\ObjectManager" namespace="Doctrine\Common\Persistence" name="ObjectManager"/>
+    </parameter>
+  </method>
+  <method name="getUserData" start="96" end="104" abstract="false" final="false" static="false" visibility="private">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="getTagData" start="106" end="119" abstract="false" final="false" static="false" visibility="private">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="getPostData" start="121" end="139" abstract="false" final="false" static="false" visibility="private"/>
+  <method name="getPhrases" start="141" end="175" abstract="false" final="false" static="false" visibility="private">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="getRandomText" start="177" end="187" abstract="false" final="false" static="false" visibility="private">
+    <return type="string" nullable="false"/>
+    <parameter name="maxLength" byreference="false" type="integer" default="255"/>
+  </method>
+  <method name="getPostContent" start="189" end="227" abstract="false" final="false" static="false" visibility="private">
+    <return type="string" nullable="false"/>
+  </method>
+  <method name="getRandomTags" start="229" end="236" abstract="false" final="false" static="false" visibility="private">
+    <return type="array" nullable="false"/>
+  </method>
+</class>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - SebastianBergmann\Money\Money</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#SebastianBergmann_Money">SebastianBergmann\Money</a>
+          </li>
+          <li class="separator">Money</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Money.php.html#line25">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>SebastianBergmann\Money\</small>Money</h1>
+        <h4>Value Object that represents a monetary value (using a currency's smallest unit).</h4>
+        <p/>
+        <ul>
+          <li>Author: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>Copyright: Sebastian Bergmann &lt;sebastian@phpunit.de&gt;</li>
+          <li>License: http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Money
+                implements
+                <a title="JsonSerializable" href="../interfaces/JsonSerializable.html">JsonSerializable</a>
+            {<br/><ul class="none"><li>// members</li><li>private  <a href="#members">$amount</a>;
+                    </li><li>private <span title="\SebastianBergmann\Money\Currency">Currency</span> <a href="#members">$currency</a>;
+                    </li><li>private static array <a href="#members">$roundingModes</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/__construct.html">__construct</a>()
+                    </li><li>public static Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/fromString.html">fromString</a>()
+                    </li><li>public mixed <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/jsonSerialize.html">jsonSerialize</a>()
+                    </li><li>public integer <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getAmount.html">getAmount</a>()
+                    </li><li>public float <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getConvertedAmount.html">getConvertedAmount</a>()
+                    </li><li>public Currency <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getCurrency.html">getCurrency</a>()
+                    </li><li>public Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/add.html">add</a>()
+                    </li><li>public Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/subtract.html">subtract</a>()
+                    </li><li>public Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/negate.html">negate</a>()
+                    </li><li>public Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/multiply.html">multiply</a>()
+                    </li><li>public array <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/allocateToTargets.html">allocateToTargets</a>()
+                    </li><li>public array <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/allocateByRatios.html">allocateByRatios</a>()
+                    </li><li>public array <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/extractPercentage.html">extractPercentage</a>()
+                    </li><li>public integer <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/compareTo.html">compareTo</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/equals.html">equals</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/greaterThan.html">greaterThan</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/greaterThanOrEqual.html">greaterThanOrEqual</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/lessThan.html">lessThan</a>()
+                    </li><li>public boolean <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/lessThanOrEqual.html">lessThanOrEqual</a>()
+                    </li><li>private void <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertSameCurrency.html">assertSameCurrency</a>()
+                    </li><li>private number <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertIsInteger.html">assertIsInteger</a>()
+                    </li><li>private number <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertInsideIntegerBounds.html">assertInsideIntegerBounds</a>()
+                    </li><li>private int <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/castToInt.html">castToInt</a>()
+                    </li><li>private Money <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/newMoney.html">newMoney</a>()
+                    </li><li>private static Currency <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/handleCurrencyArgument.html">handleCurrencyArgument</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JsonSerializable" href="../interfaces/JsonSerializable.html">JsonSerializable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="amount"><strong>$amount</strong>
+                —
+                integer</li>
+            <li id="currency"><strong>$currency</strong>
+                —
+                <a title="\SebastianBergmann\Money\Currency" href="../classes/_SebastianBergmann_Money_Currency.html">\SebastianBergmann\Money\Currency</a></li>
+            <li id="roundingModes"><strong>$roundingModes</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="assertInsideIntegerBounds"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertInsideIntegerBounds.html">assertInsideIntegerBounds()</a>
+                — Raises an exception if the amount is outside of the integer bounds</li>
+            <li id="assertIsInteger"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertIsInteger.html">assertIsInteger()</a>
+                — Raises an exception if the amount is not an integer</li>
+            <li id="assertSameCurrency">
+              <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/assertSameCurrency.html">assertSameCurrency()</a>
+            </li>
+            <li id="castToInt"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/castToInt.html">castToInt()</a>
+                — Cast an amount to an integer but ensure that the operation won't hide overflow</li>
+            <li id="handleCurrencyArgument">
+              <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/handleCurrencyArgument.html">handleCurrencyArgument()</a>
+            </li>
+            <li id="newMoney">
+              <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/newMoney.html">newMoney()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct">
+              <a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/__construct.html">__construct()</a>
+            </li>
+            <li id="add"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/add.html">add()</a>
+                — Returns a new Money object that represents the monetary value of the sum of this Money object and another.</li>
+            <li id="allocateByRatios"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/allocateByRatios.html">allocateByRatios()</a>
+                — Allocate the monetary value represented by this Money object using a list of ratios.</li>
+            <li id="allocateToTargets"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/allocateToTargets.html">allocateToTargets()</a>
+                — Allocate the monetary value represented by this Money object among N targets.</li>
+            <li id="compareTo"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/compareTo.html">compareTo()</a>
+                — Compares this Money object to another.</li>
+            <li id="equals"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/equals.html">equals()</a>
+                — Returns TRUE if this Money object equals to another.</li>
+            <li id="extractPercentage"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/extractPercentage.html">extractPercentage()</a>
+                — Extracts a percentage of the monetary value represented by this Money object and returns an array of two Money objects: $original = $result['subtotal'] + $result['percentage'];</li>
+            <li id="fromString"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/fromString.html">fromString()</a>
+                — Creates a Money object from a string such as "12.34"</li>
+            <li id="getAmount"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getAmount.html">getAmount()</a>
+                — Returns the monetary value represented by this object.</li>
+            <li id="getConvertedAmount"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getConvertedAmount.html">getConvertedAmount()</a>
+                — return the monetary value represented by this object converted to its base units</li>
+            <li id="getCurrency"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/getCurrency.html">getCurrency()</a>
+                — Returns the currency of the monetary value represented by this object.</li>
+            <li id="greaterThan"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/greaterThan.html">greaterThan()</a>
+                — Returns TRUE if the monetary value represented by this Money object is greater than that of another, FALSE otherwise.</li>
+            <li id="greaterThanOrEqual"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/greaterThanOrEqual.html">greaterThanOrEqual()</a>
+                — Returns TRUE if the monetary value represented by this Money object is greater than or equal that of another, FALSE otherwise.</li>
+            <li id="jsonSerialize"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/jsonSerialize.html">jsonSerialize()</a>
+                — Specify data which should be serialized to JSON</li>
+            <li id="lessThan"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/lessThan.html">lessThan()</a>
+                — Returns TRUE if the monetary value represented by this Money object is smaller than that of another, FALSE otherwise.</li>
+            <li id="lessThanOrEqual"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/lessThanOrEqual.html">lessThanOrEqual()</a>
+                — Returns TRUE if the monetary value represented by this Money object is smaller than or equal that of another, FALSE otherwise.</li>
+            <li id="multiply"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/multiply.html">multiply()</a>
+                — Returns a new Money object that represents the monetary value of this Money object multiplied by a given factor.</li>
+            <li id="negate"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/negate.html">negate()</a>
+                — Returns a new Money object that represents the negated monetary value of this Money object.</li>
+            <li id="subtract"><a title="SebastianBergmann\Money\Money" href="../classes/SebastianBergmann_Money_Money/subtract.html">subtract()</a>
+                — Returns a new Money object that represents the monetary value of the difference of this Money object and another.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-03-07T09:49:28+00:00 (commit #<span title="67b25c89af4062bfe3252719402714e701088a5a">67b25c8</span>)</h3>
+            <div>
+              <p>
+                        Author: Andrew (browner12@gmail.com) /
+                        Commiter: Sebastian Bergmann (browner12@gmail.com)
+                    </p>
+              <pre class="wrapped">create method to retrieve amount converted to base units
+
+`getConvertedAmount` converts the `Money`s value into its base units
+(dollars, euros, etc) and rounds to the appropriate digits.
+
+update the `IntlFormatter` to use this new method.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-02-22T08:55:16+00:00 (commit #<span title="7bae7a96e76781bdec30779a893e7c351c6b1265">7bae7a9</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Drop support for PHP &lt; 5.4</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-02T16:09:57+00:00 (commit #<span title="bded08469cc5ee12cc2d6a661acd31918c5f4bcc">bded084</span>)</h3>
+            <div>
+              <p>
+                        Author: Henrique Moody (henriquemoody@gmail.com) /
+                        Commiter: Henrique Moody (henriquemoody@gmail.com)
+                    </p>
+              <pre class="wrapped">Update license and copyright in all files</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-24T07:44:23+00:00 (commit #<span title="d00f04cb2eed53ad923e35fa7b78528e6a66c881">d00f04c</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Close #36</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-28T15:48:52+00:00 (commit #<span title="31c7b43040ae0b2a05b2909db77fbf27acd75df3">31c7b43</span>)</h3>
+            <div>
+              <p>
+                        Author: Ruud Kamphuis (ruudk@mphuis.com) /
+                        Commiter: Ruud Kamphuis (ruudk@mphuis.com)
+                    </p>
+              <pre class="wrapped">Changed PHPDoc @return type to static</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T08:26:30+00:00 (commit #<span title="955b020261dfb365b775482bb8eff9cfd6f34d6e">955b020</span>)</h3>
+            <div>
+              <p>
+                        Author: Ruud Kamphuis (ruudk@mphuis.com) /
+                        Commiter: Ruud Kamphuis (ruudk@mphuis.com)
+                    </p>
+              <pre class="wrapped">Added RoundingMode for extractPercentage method
+
+See rules for rounding VAT of Dutch VAT Agency:
+http://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/administratie_bijhouden/facturen_maken/btw-bedrag_afronden
+
+Translation:
+You use for the completion of the amount of VAT the arithmetic method. If the amount of VAT due on the invoice consists of more than two decimal places, it rounds to the 3rd decimal place off to whole cents. This is done as follows:</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-09-05T13:14:53+00:00 (commit #<span title="c17fbc296d1ff8fd60034fc511455ebe235d9880">c17fbc2</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add note</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-09-04T08:01:41+00:00 (commit #<span title="eac919e1e45adb25fadf913b2773faf359a8c287">eac919e</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Implement Money::extractPercentage() to extract a percentage and the corresponding subtotal; see #27</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-08-17T09:18:11+00:00 (commit #<span title="4cab00dde0bb5b2c69c7f82fc85285cce1c0a1d7">4cab00d</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-08-17T08:58:23+00:00 (commit #<span title="77ffe7f8c544141ea81be71d1d6659a49b2f7f21">77ffe7f</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Refactor</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-08-17T08:46:35+00:00 (commit #<span title="8972665d7065bb0f653941709464d4242132cce2">8972665</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-08-17T08:34:52+00:00 (commit #<span title="3ddca0a6621de76a5914b0f31c7e4bfcaac4c150">3ddca0a</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Allow ISO 4217 currency code as second constructor argument</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-08-17T05:28:19+00:00 (commit #<span title="cb8e59ab550dc472b58b167fbdb4290d09884bbc">cb8e59a</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Inline factory as named constructor</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-04-07T08:23:34+00:00 (commit #<span title="83a1f9b418fd0db07ddb2640baaab2df409ba1b9">83a1f9b</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Cleanup</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-24T21:56:24+00:00 (commit #<span title="acdc9a7f48939a91afc7e25dfd5529a4bb195f97">acdc9a7</span>)</h3>
+            <div>
+              <p>
+                        Author: Cam Spiers (camspiers@gmail.com) /
+                        Commiter: Cam Spiers (camspiers@gmail.com)
+                    </p>
+              <pre class="wrapped">Throw more informative exceptions when addition and subtract cause overflow
+
+Currently an InvalidArgumentException is thrown during overflow causing
+addition and subtract.
+
+This exception type is not very informative, and because it is an
+internal operation that is causing it, a more informative exception</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-07T03:48:11+00:00 (commit #<span title="a8ae3ab40ee9a4cda42049131742fe91568556c6">a8ae3ab</span>)</h3>
+            <div>
+              <p>
+                        Author: Cam Spiers (camspiers@gmail.com) /
+                        Commiter: Cam Spiers (camspiers@gmail.com)
+                    </p>
+              <pre class="wrapped">Provide new functionality to ensure that internal operations don't
+disguise imprecision
+
+In certain cases it is possible for the Money object to deal in numbers
+which overflow the integer limit of PHP this introduces errors that a
+users of the package will not be aware of. This commit causes
+failure by throwing an exception when a to-be-cast number is out of integer</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-03-05T19:51:37+00:00 (commit #<span title="11dfb5c178e64a0134d1e332bc500fe0bb127c0e">11dfb5c</span>)</h3>
+            <div>
+              <p>
+                        Author: Boris Glumpler (boris@shabushabu.eu) /
+                        Commiter: Boris Glumpler (boris@shabushabu.eu)
+                    </p>
+              <pre class="wrapped">Added late static binding to newMoney() method</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-01-21T19:47:31+00:00 (commit #<span title="1b8b5a63b3ff1691c36998a6edf7030f5c751d4a">1b8b5a6</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Bump copyright year</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-13T13:31:20+00:00 (commit #<span title="f9ab15f5cf4217412530c779a3e2a837d7351c51">f9ab15f</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Make PHPStorm happy</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-13T09:24:47+00:00 (commit #<span title="4596e253a36092f76f9f49d4143d7bb0998f52d1">4596e25</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix @copyright annotation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-13T08:07:30+00:00 (commit #<span title="09016ed5bd9a19afc7104987859ace6fd31e4bd1">09016ed</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Eliminate duplicate code</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-11T14:45:56+00:00 (commit #<span title="09b227a2616524a90d2d0950562e4107c0ad2f04">09b227a</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add missing type for @return annotation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-11-11T14:44:17+00:00 (commit #<span title="147c7ce13dc3c5f048684f148e42e3072a7dae52">147c7ce</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add missing @throws annotation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-10-19T15:57:13+00:00 (commit #<span title="fcf91edf526d105919d6ecb3324d278467f682be">fcf91ed</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Implement rounding in multiply()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-09-14T14:47:46+00:00 (commit #<span title="36c73dc48e0b1c43715d5359449dd34a9a667c2c">36c73dc</span>)</h3>
+            <div>
+              <p>
+                        Author: Hugo Hamon (hugo.hamon@sensiolabs.com) /
+                        Commiter: Hugo Hamon (hugo.hamon@sensiolabs.com)
+                    </p>
+              <pre class="wrapped">Added Money::equals(), Money::greaterThanOrEqual() and Money::lessThanOrEqual() methods</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-09-13T20:31:36+00:00 (commit #<span title="43508c5391101576b7989f6165bdb9dea0a1840c">43508c5</span>)</h3>
+            <div>
+              <p>
+                        Author: Hugo Hamon (hugo.hamon@sensiolabs.com) /
+                        Commiter: Hugo Hamon (hugo.hamon@sensiolabs.com)
+                    </p>
+              <pre class="wrapped">Use absolute namespaces in phpdoc to ease understanding by most IDEAs (ie: PHPStorm)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-19T09:13:33+00:00 (commit #<span title="7ff084519a61e0dff5299cbe339db00626fe5297">7ff0845</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Extract Money::formatAsString() to IntlFormatter::format()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T18:45:43+00:00 (commit #<span title="a86ec4d2f0c0a7c676c007df259a70a4f36a8d77">a86ec4d</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix CS violation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T16:26:43+00:00 (commit #<span title="ee990d3eb4bec63cd9f565d7f3c6aceb0d7fe64f">ee990d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Implement formatAsString()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T13:57:07+00:00 (commit #<span title="79d5614028f3ff8c3fbac5d57a04e818d4773681">79d5614</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Format code according to PSR-2</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T13:44:52+00:00 (commit #<span title="fdb3003a5bc60c7c4f525bcbb0aedf2ad35ef39f">fdb3003</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Fix docblock</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T13:44:30+00:00 (commit #<span title="b43506e95244dcbfab4727d6c94b0c8de01f6f75">b43506e</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Refactor</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T13:37:20+00:00 (commit #<span title="5b2b4a945500e59a70ce612e922887a6afcb8ef0">5b2b4a9</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">* Rename divide() to allocateToTargets()
+* Refactor implementation of allocateToTargets()
+* Implement allocateByRatios()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T12:51:20+00:00 (commit #<span title="1a584dfc375bdb54c1d2a122eca43888a147ef45">1a584df</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Implement Currency class</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T10:12:46+00:00 (commit #<span title="40beadeb810d10c63f2e5abde5ffd1fa057bfc06">40beade</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Improve documentation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2013-07-18T10:08:28+00:00 (commit #<span title="d04887defe8b2331256e37d3585d28941ec004d2">d04887d</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add missing docblocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-11-24T17:49:57+00:00 (commit #<span title="79d9d880e1a2bb3431e0a718747ecab34084c636">79d9d88</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Add API documentation.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-11-24T17:20:23+00:00 (commit #<span title="f0de24878b6b1cf5dd5cb61badad539be7b91e10">f0de248</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Revert "Extract interface."
+
+This reverts commit 4d2c2a327239b10a960cb4e4e43367a7e04ac29e.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-04-12T14:08:03+00:00 (commit #<span title="4d2c2a327239b10a960cb4e4e43367a7e04ac29e">4d2c2a3</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Extract interface.</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2012-04-12T14:00:44+00:00 (commit #<span title="d1bf47f14ff12723a718b1721658e5dc3f854ed3">d1bf47f</span>)</h3>
+            <div>
+              <p>
+                        Author: Sebastian Bergmann (sb@sebastian-bergmann.de) /
+                        Commiter: Sebastian Bergmann (sb@sebastian-bergmann.de)
+                    </p>
+              <pre class="wrapped">Initial import.</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

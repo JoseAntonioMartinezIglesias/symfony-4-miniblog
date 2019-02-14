@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\EventSubscriber\CheckRequirementsSubscriber" namespace="App\EventSubscriber" name="CheckRequirementsSubscriber" abstract="false" final="false" start="31" end="101">
+  <file path="../src/EventSubscriber" file="CheckRequirementsSubscriber.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/EventSubscriber/CheckRequirementsSubscriber.php" size="4372" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="d63537dedea5695cc8c6ffe883b2e4e02e39795b" relative="EventSubscriber/CheckRequirementsSubscriber.php"/>
+  <docblock>
+    <description compact="This application uses by default an SQLite database to store its information.">That's why the 'sqlite3' extension must be enabled in PHP. This event
+subscriber listens to console events and in case of an exception caused by
+a disabled 'sqlite3' extension, it displays a meaningful error message.</description>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <implements full="Symfony\Component\EventDispatcher\EventSubscriberInterface" namespace="Symfony\Component\EventDispatcher" name="EventSubscriberInterface" unresolved="true"/>
+  <member name="entityManager" visibility="private" static="false" line="33"/>
+  <constructor name="__construct" start="35" end="38" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="entityManager" byreference="false" type="object">
+      <type full="Doctrine\ORM\EntityManagerInterface" namespace="Doctrine\ORM" name="EntityManagerInterface"/>
+    </parameter>
+  </constructor>
+  <method name="getSubscribedEvents" start="44" end="53" abstract="false" final="false" static="true" visibility="public">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="handleConsoleError" start="60" end="70" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method checks if there has been an error in a command related to the database and then, it checks if the 'sqlite3' PHP extension is enabled or not to display a better error message."/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Event\ConsoleErrorEvent" namespace="Symfony\Component\Console\Event" name="ConsoleErrorEvent"/>
+    </parameter>
+  </method>
+  <method name="handleKernelException" start="76" end="90" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method checks if the triggered exception is related to the database and then, it checks if the required 'sqlite3' PHP extension is enabled."/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent" namespace="Symfony\Component\HttpKernel\Event" name="GetResponseForExceptionEvent"/>
+    </parameter>
+    <inline>
+      <comment value="Since any exception thrown during a Twig template rendering is wrapped" line="79"/>
+      <comment value="in a Twig_Error_Runtime, we must get the original exception." line="80"/>
+      <comment value="Driver exception may happen in controller or in twig template rendering" line="83"/>
+      <comment value="Check if SQLite is enabled" line="86"/>
+    </inline>
+  </method>
+  <method name="isSQLitePlatform" start="95" end="100" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Checks if the application is using SQLite as its database."/>
+    </docblock>
+    <return type="bool" nullable="false"/>
+  </method>
+</class>

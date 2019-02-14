@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src">
+    <file name="Kernel.php" size="2301" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="0e222943d496849dc9fc284c15ddeeed80855789" xml="tokens/Kernel.php.xml"/>
+    <dir name="Controller">
+      <file name="SecurityController.php" size="1646" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="6ce1d84d972e16d5adc2b68898aafa24a040ac8c" xml="tokens/Controller/SecurityController.php.xml"/>
+      <file name="BlogController.php" size="7228" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="edaba7c50861306e0f753b9eabb184bbb2e9d373" xml="tokens/Controller/BlogController.php.xml"/>
+      <dir name="Admin">
+        <file name="BlogController.php" size="6644" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c9bc33bf6b21f17182c6349bfafbc40cac1ef54d" xml="tokens/Controller/Admin/BlogController.php.xml"/>
+      </dir>
+      <file name="UserController.php" size="2322" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2ba9860fbb212ed708dcb42911637b11a0f7804a" xml="tokens/Controller/UserController.php.xml"/>
+    </dir>
+    <dir name="Command">
+      <file name="DeleteUserCommand.php" size="4447" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="37b94090d172ba1e8931d63ca9cf4cb9977c41ba" xml="tokens/Command/DeleteUserCommand.php.xml"/>
+      <file name="ListUsersCommand.php" size="5249" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="91aea2184be3b2a2bdf4dbaa95c501289ffed892" xml="tokens/Command/ListUsersCommand.php.xml"/>
+      <file name="AddUserCommand.php" size="10492" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="e5b461e3c887c93e4971df463ad5724134544d14" xml="tokens/Command/AddUserCommand.php.xml"/>
+    </dir>
+    <dir name="Form">
+      <file name="CommentType.php" size="1793" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="b19df99bc85c2fbca4c14610b00b969cfabbee2d" xml="tokens/Form/CommentType.php.xml"/>
+      <dir name="Type">
+        <file name="DateTimePickerType.php" size="1881" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="6faa17b1c65a0707eea78e91d02f94df3f0e2d2a" xml="tokens/Form/Type/DateTimePickerType.php.xml"/>
+        <file name="ChangePasswordType.php" size="1984" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="23b89b3723cf67bbb4146f82ab8ea855742793e5" xml="tokens/Form/Type/ChangePasswordType.php.xml"/>
+        <file name="TagsInputType.php" size="2049" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c5bd7243e93ed092417e4ecddfd5dfe55e003255" xml="tokens/Form/Type/TagsInputType.php.xml"/>
+      </dir>
+      <dir name="DataTransformer">
+        <file name="TagArrayToStringTransformer.php" size="2405" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="78a7cdf1eb7021bf516a5e10b54c6a7dcfb1e7f2" xml="tokens/Form/DataTransformer/TagArrayToStringTransformer.php.xml"/>
+      </dir>
+      <file name="PostType.php" size="2510" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2307245ee65aadcdbdead3e661ed33d6da36cb5e" xml="tokens/Form/PostType.php.xml"/>
+      <file name="UserType.php" size="1945" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2852c8b98540b8f5f3ca0e586ea0014ac6e0f114" xml="tokens/Form/UserType.php.xml"/>
+    </dir>
+    <dir name="Entity">
+      <file name="Tag.php" size="1595" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="5f07228f89e011f3fe2b128ae8babe9fd8139080" xml="tokens/Entity/Tag.php.xml"/>
+      <file name="User.php" size="4288" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="33ca05b4ba2a812d4529e37b543aad8080cb0192" xml="tokens/Entity/User.php.xml"/>
+      <file name="Post.php" size="5227" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="8635a5beb28ac49a088f11c0ba88bf85adfd1cf4" xml="tokens/Entity/Post.php.xml"/>
+      <file name="Comment.php" size="2902" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2e034073d74dccfbd82c380b5e277460dc69a17a" xml="tokens/Entity/Comment.php.xml"/>
+    </dir>
+    <dir name="EventSubscriber">
+      <file name="RedirectToPreferredLocaleSubscriber.php" size="3111" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="833b90bd72fb6c7702cf9f7e7cafcc158302070c" xml="tokens/EventSubscriber/RedirectToPreferredLocaleSubscriber.php.xml"/>
+      <file name="ControllerSubscriber.php" size="1557" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="d452b91484f703b14f67f01d846d6f2b614f8195" xml="tokens/EventSubscriber/ControllerSubscriber.php.xml"/>
+      <file name="CheckRequirementsSubscriber.php" size="4372" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="d63537dedea5695cc8c6ffe883b2e4e02e39795b" xml="tokens/EventSubscriber/CheckRequirementsSubscriber.php.xml"/>
+      <file name="CommentNotificationSubscriber.php" size="2831" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="431b584cfbfa8aefc6989b0b9a71cf096c5deae4" xml="tokens/EventSubscriber/CommentNotificationSubscriber.php.xml"/>
+    </dir>
+    <file name="Events.php" size="814" time="2019-02-14T20:40:37+00:00" unixtime="1550176837" sha1="eb307ea0213f45a92705bd69b360e6b794f03640" xml="tokens/Events.php.xml"/>
+    <dir name="Twig">
+      <file name="AppExtension.php" size="2282" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c37d4acf1ad23e4033baef2f12444b009bedd83f" xml="tokens/Twig/AppExtension.php.xml"/>
+      <file name="SourceCodeExtension.php" size="4288" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="def8313770ea21e0bb4776b896acdd4cf6e114f4" xml="tokens/Twig/SourceCodeExtension.php.xml"/>
+    </dir>
+    <dir name="Security">
+      <file name="PostVoter.php" size="1888" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2fd614a9f50207ef57d057731e3307e140cf83ef" xml="tokens/Security/PostVoter.php.xml"/>
+    </dir>
+    <dir name="Utils">
+      <file name="Slugger.php" size="550" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="992d510870833a545157190c2a538ced7b058c43" xml="tokens/Utils/Slugger.php.xml"/>
+      <file name="Validator.php" size="1518" time="2019-02-14T20:40:05+00:00" unixtime="1550176805" sha1="26cf2a0327ba39a3ce9da093c9df412e81880302" xml="tokens/Utils/Validator.php.xml"/>
+      <file name="Markdown.php" size="1157" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2efe752678bf5cd5c7eb2275227fc01b74aad340" xml="tokens/Utils/Markdown.php.xml"/>
+      <file name="MomentFormatConverter.php" size="1270" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="b5ae070bd9d5c1669cd9403caee1b484a8b510a7" xml="tokens/Utils/MomentFormatConverter.php.xml"/>
+    </dir>
+    <dir name="Repository">
+      <file name="TagRepository.php" size="959" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2dc7b493cd60155d63daa3fa263c296e5af18793" xml="tokens/Repository/TagRepository.php.xml"/>
+      <file name="PostRepository.php" size="3256" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="32ffaff1af3e2594212b078886844e002fae5589" xml="tokens/Repository/PostRepository.php.xml"/>
+      <file name="UserRepository.php" size="1013" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c1de96f645ff5be1b03998daf15a3250c4c231c1" xml="tokens/Repository/UserRepository.php.xml"/>
+    </dir>
+    <dir name="DataFixtures">
+      <file name="AppFixtures.php" size="8523" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="ca2bcb9df2da5a567f12ebc8aa578eb082e5f58e" xml="tokens/DataFixtures/AppFixtures.php.xml"/>
+    </dir>
+  </dir>
+</source>

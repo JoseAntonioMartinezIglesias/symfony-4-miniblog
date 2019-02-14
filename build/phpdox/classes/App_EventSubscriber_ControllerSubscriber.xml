@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\EventSubscriber\ControllerSubscriber" namespace="App\EventSubscriber" name="ControllerSubscriber" abstract="false" final="false" start="26" end="51">
+  <file path="../src/EventSubscriber" file="ControllerSubscriber.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/EventSubscriber/ControllerSubscriber.php" size="1557" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="d452b91484f703b14f67f01d846d6f2b614f8195" relative="EventSubscriber/ControllerSubscriber.php"/>
+  <docblock>
+    <description compact="Defines the method that 'listens' to the 'kernel.controller' event, which is triggered whenever a controller is executed in the application."/>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <implements full="Symfony\Component\EventDispatcher\EventSubscriberInterface" namespace="Symfony\Component\EventDispatcher" name="EventSubscriberInterface" unresolved="true"/>
+  <member name="twigExtension" visibility="private" static="false" line="28"/>
+  <constructor name="__construct" start="30" end="33" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="twigExtension" byreference="false" type="object">
+      <type full="App\Twig\SourceCodeExtension" namespace="App\Twig" name="SourceCodeExtension"/>
+    </parameter>
+  </constructor>
+  <method name="getSubscribedEvents" start="35" end="40" abstract="false" final="false" static="true" visibility="public">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="registerCurrentController" start="42" end="50" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Symfony\Component\HttpKernel\Event\FilterControllerEvent" namespace="Symfony\Component\HttpKernel\Event" name="FilterControllerEvent"/>
+    </parameter>
+    <inline>
+      <comment value="this check is needed because in Symfony a request can perform any" line="44"/>
+      <comment value="number of sub-requests. See" line="45"/>
+      <comment value="https://symfony.com/doc/current/components/http_kernel/introduction.html#sub-requests" line="46"/>
+    </inline>
+  </method>
+</class>

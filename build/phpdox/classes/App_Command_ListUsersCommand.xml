@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Command\ListUsersCommand" namespace="App\Command" name="ListUsersCommand" abstract="false" final="false" start="37" end="143">
+  <file path="../src/Command" file="ListUsersCommand.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Command/ListUsersCommand.php" size="5249" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="91aea2184be3b2a2bdf4dbaa95c501289ffed892" relative="Command/ListUsersCommand.php"/>
+  <docblock>
+    <description compact="A console command that lists all the existing users.">To use this command, open a terminal window, enter into your project directory
+and execute the following:
+
+    $ php bin/console app:list-users
+
+See https://symfony.com/doc/current/cookbook/console/console_command.html
+For more advanced uses, commands can be defined as services too. See
+https://symfony.com/doc/current/console/commands_as_services.html</description>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Component\Console\Command\Command" namespace="Symfony\Component\Console\Command" name="Command" unresolved="true"/>
+  <member name="defaultName" default="'app:list-users'" type="string" visibility="protected" static="true" line="40"/>
+  <member name="mailer" visibility="private" static="false" line="42"/>
+  <member name="emailSender" visibility="private" static="false" line="43"/>
+  <member name="users" visibility="private" static="false" line="44"/>
+  <constructor name="__construct" start="46" end="53" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="mailer" byreference="false" type="object">
+      <type full="Swift_Mailer" namespace="" name="Swift_Mailer"/>
+    </parameter>
+    <parameter name="emailSender" byreference="false" type="{unknown}"/>
+    <parameter name="users" byreference="false" type="object">
+      <type full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository"/>
+    </parameter>
+  </constructor>
+  <method name="configure" start="58" end="84" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="{@inheritdoc}"/>
+    </docblock>
+  </method>
+  <method name="execute" start="90" end="126" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This method is executed after initialize(). It usually contains the logic to execute to complete this command task."/>
+    </docblock>
+    <parameter name="input" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Input\InputInterface" namespace="Symfony\Component\Console\Input" name="InputInterface"/>
+    </parameter>
+    <parameter name="output" byreference="false" type="object">
+      <type full="Symfony\Component\Console\Output\OutputInterface" namespace="Symfony\Component\Console\Output" name="OutputInterface"/>
+    </parameter>
+    <inline>
+      <comment value="Use -&gt;findBy() instead of -&gt;findAll() to allow result sorting and limiting" line="93"/>
+      <comment value="Doctrine query returns an array of objects and we need an array of plain arrays" line="96"/>
+      <comment value="In your console commands you should always use the regular output type," line="107"/>
+      <comment value="which outputs contents directly in the console window. However, this" line="108"/>
+      <comment value="command uses the BufferedOutput type instead, to be able to get the output" line="109"/>
+      <comment value="contents before displaying them. This is needed because the command allows" line="110"/>
+      <comment value="to send the list of users via email with the '--send-to' option" line="111"/>
+      <comment value="instead of just displaying the table of users, store its contents in a variable" line="119"/>
+    </inline>
+  </method>
+  <method name="sendReport" start="131" end="142" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Sends the given $contents to the $recipient email address."/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="contents" byreference="false" type="string"/>
+    <parameter name="recipient" byreference="false" type="string"/>
+    <inline>
+      <comment value="See https://symfony.com/doc/current/cookbook/email/email.html" line="133"/>
+    </inline>
+  </method>
+</class>

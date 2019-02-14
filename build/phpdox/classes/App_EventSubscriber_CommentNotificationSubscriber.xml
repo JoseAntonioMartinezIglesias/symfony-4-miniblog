@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\EventSubscriber\CommentNotificationSubscriber" namespace="App\EventSubscriber" name="CommentNotificationSubscriber" abstract="false" final="false" start="26" end="81">
+  <file path="../src/EventSubscriber" file="CommentNotificationSubscriber.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/EventSubscriber/CommentNotificationSubscriber.php" size="2831" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="431b584cfbfa8aefc6989b0b9a71cf096c5deae4" relative="EventSubscriber/CommentNotificationSubscriber.php"/>
+  <docblock>
+    <description compact="Notifies post's author about new comments."/>
+    <author value="Oleg Voronkovich &lt;oleg-voronkovich@yandex.ru&gt;"/>
+  </docblock>
+  <implements full="Symfony\Component\EventDispatcher\EventSubscriberInterface" namespace="Symfony\Component\EventDispatcher" name="EventSubscriberInterface" unresolved="true"/>
+  <member name="mailer" visibility="private" static="false" line="28"/>
+  <member name="translator" visibility="private" static="false" line="29"/>
+  <member name="urlGenerator" visibility="private" static="false" line="30"/>
+  <member name="sender" visibility="private" static="false" line="31"/>
+  <constructor name="__construct" start="33" end="39" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="mailer" byreference="false" type="object">
+      <type full="Swift_Mailer" namespace="" name="Swift_Mailer"/>
+    </parameter>
+    <parameter name="urlGenerator" byreference="false" type="object">
+      <type full="Symfony\Component\Routing\Generator\UrlGeneratorInterface" namespace="Symfony\Component\Routing\Generator" name="UrlGeneratorInterface"/>
+    </parameter>
+    <parameter name="translator" byreference="false" type="object">
+      <type full="Symfony\Component\Translation\TranslatorInterface" namespace="Symfony\Component\Translation" name="TranslatorInterface"/>
+    </parameter>
+    <parameter name="sender" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="getSubscribedEvents" start="41" end="46" abstract="false" final="false" static="true" visibility="public">
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="onCommentCreated" start="48" end="80" abstract="false" final="false" static="false" visibility="public">
+    <return type="void" nullable="false"/>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Symfony\Component\EventDispatcher\GenericEvent" namespace="Symfony\Component\EventDispatcher" name="GenericEvent"/>
+    </parameter>
+    <inline>
+      <comment value="Symfony uses a library called SwiftMailer to send emails. That's why" line="65"/>
+      <comment value="email messages are created instantiating a Swift_Message class." line="66"/>
+      <comment value="See https://symfony.com/doc/current/email.html#sending-emails" line="67"/>
+      <comment value="In config/packages/dev/swiftmailer.yaml the 'disable_delivery' option is set to 'true'." line="75"/>
+      <comment value="That's why in the development environment you won't actually receive any email." line="76"/>
+      <comment value="However, you can inspect the contents of those unsent emails using the debug toolbar." line="77"/>
+      <comment value="See https://symfony.com/doc/current/email/dev_environment.html#viewing-from-the-web-debug-toolbar" line="78"/>
+    </inline>
+  </method>
+</class>

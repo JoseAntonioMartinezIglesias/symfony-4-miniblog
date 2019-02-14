@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\SecurityController" namespace="App\Controller" name="SecurityController" abstract="false" final="false" start="26" end="53">
+  <file path="../src/Controller" file="SecurityController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/SecurityController.php" size="1646" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="6ce1d84d972e16d5adc2b68898aafa24a040ac8c" relative="Controller/SecurityController.php"/>
+  <docblock>
+    <description compact="Controller used to manage the application security.">See https://symfony.com/doc/current/cookbook/security/form_login_setup.html.</description>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="login" start="31" end="39" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/login&quot;, name=&quot;security_login&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="helper" byreference="false" type="object">
+      <type full="Symfony\Component\Security\Http\Authentication\AuthenticationUtils" namespace="Symfony\Component\Security\Http\Authentication" name="AuthenticationUtils"/>
+    </parameter>
+  </method>
+  <method name="logout" start="49" end="52" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This is the route the user can use to logout.">But, this will never be executed. Symfony will intercept this first
+and handle the logout automatically. See logout in config/packages/security.yaml</description>
+      <route value="(&quot;/logout&quot;, name=&quot;security_logout&quot;)"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository" abstract="false" final="false" start="28" end="34">
+  <file path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1013" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c1de96f645ff5be1b03998daf15a3250c4c231c1" relative="Repository/UserRepository.php"/>
+  <docblock>
+    <description compact="This custom Doctrine repository is empty because so far we don't need any custom method to query for application user information. But it's always a good practice to define a custom repository that will be used when the application grows.">See https://symfony.com/doc/current/doctrine/repository.html</description>
+    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
+    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+  </docblock>
+  <extends full="Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository" namespace="Doctrine\Bundle\DoctrineBundle\Repository" name="ServiceEntityRepository" unresolved="true"/>
+  <constructor name="__construct" start="30" end="33" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="registry" byreference="false" type="object">
+      <type full="Doctrine\Common\Persistence\ManagerRegistry" namespace="Doctrine\Common\Persistence" name="ManagerRegistry"/>
+    </parameter>
+  </constructor>
+</class>

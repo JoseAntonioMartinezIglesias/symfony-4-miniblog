@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - App\Command\AddUserCommand::interact</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.html#App_Command">App\Command</a>
+          </li>
+          <li class="separator">
+            <a title="App\Command\AddUserCommand" href="../../classes/App_Command_AddUserCommand.html">AddUserCommand</a>
+          </li>
+          <li class="separator">interact</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="../../source/Command/AddUserCommand.php.html#line113">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>App\Command\AddUserCommand::</small>interact</h1>
+        <h4>This method is executed after initialize() and before execute(). Its purpose is to check if some of the options/arguments are missing and interactively ask the user for those values.</h4>
+        <p>This method is completely optional. If you are developing an internal console
+command, you probably should not implement this method because it requires
+quite a lot of work. However, if the command is meant to be used by external
+users, this method is a nice way to fall back and prevent errors.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function interact(<a title="Symfony\Component\Console\Input\InputInterface" href="../../classes/Symfony_Component_Console_Input_InputInterface.html">InputInterface</a>
+        $input,
+            <a title="Symfony\Component\Console\Output\OutputInterface" href="../../classes/Symfony_Component_Console_Output_OutputInterface.html">OutputInterface</a>
+        $output )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$input</code>
+                —
+                <a title="" href="../../classes/.html"/></dt>
+          <dd/>
+          <dt><code>$output</code>
+                —
+                <a title="" href="../../classes/.html"/></dt>
+          <dd/>
+        </dl>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">113</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$output'.</td>
+            </tr>
+          </table>
+          <h3>Checkstyle</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Column</th>
+                <th>Severity</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">115</td>
+              <td>185</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 185 characters</td>
+            </tr>
+            <tr>
+              <td class="line">143</td>
+              <td>124</td>
+              <td>
+                <span title="Generic.Files.LineLength.TooLong">warning</span>
+              </td>
+              <td>Line exceeds 120 characters; contains 124 characters</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.0 - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
