@@ -44,4 +44,20 @@ class Mailer {
         $this->mailer->send($message);
     }
 
+    public function sendExceptionEmail(string $message, string $status) {
+        
+        $body = $this->twig->render('email/exception.html.twig', [
+            'message' => $message,
+            'status' => $status
+        ]);
+
+        $message = (new \Swift_Message())->setSubject('Welcome to the micro-post app!')
+                ->setFrom($this->mailFrom)
+                ->setTo('jositoyoyo2@hotmail.com')
+                ->setBody($body, 'text/html');
+
+        $this->mailer->send($message);
+        
+    }
+
 }

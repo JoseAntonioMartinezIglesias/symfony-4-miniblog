@@ -150,6 +150,7 @@
     
     <target name="deploy-to-pro" unless="deploy.pro" description="Deploy to production">
         <echo>Deploy to PRO</echo>
+        <delete dir="/var/www/html/PRO/app"/>
         <copydir src="${basedir}"
                  dest="/var/www/html/PRO/app"/>
         <property name="deploy.pro" value="true"/>

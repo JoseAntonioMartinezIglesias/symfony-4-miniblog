@@ -1,5 +1,3 @@
-{{ 'email.registration'|trans({
-    '%name%': user.fullName,
-    '%confirm-link%': url('security_confirm', {'token': user.confirmationToken}),
-    '%login-link%': url('security_login')
-})|raw }}
+<h2>Tu cuenta {{ user.fullName }} ha sido creada</h2>
+<a href="{{ path('security_confirm', {'token': user.confirmationToken }) }}">Activar cuenta</a>
+<p>{{ path('security_confirm', {'token': user.confirmationToken }) }}</p>

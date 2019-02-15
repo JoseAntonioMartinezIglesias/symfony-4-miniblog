@@ -34,6 +34,7 @@ class SecurityController extends AbstractController {
      * @Route("/confirm/{token}", name="security_confirm")
      */
     public function confirm(
+            
     string $token, UserRepository $userRepository, EntityManagerInterface $entityManager
     ) {
         $user = $userRepository->findOneBy(
@@ -45,7 +46,6 @@ class SecurityController extends AbstractController {
         if (null !== $user) {
             $user->setEnabled(true);
             $user->setConfirmationToken('');
-
             $entityManager->flush();
         }
 

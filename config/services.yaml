@@ -38,3 +38,7 @@ services:
             
     App\EventSubscriber\CommentNotificationSubscriber:
         $sender: '%app.notifications.email_sender%'
+        
+    App\Utils\Greeting:
+        arguments:
+            $message: 'Anonimo'

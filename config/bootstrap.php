@@ -8,38 +8,33 @@ if (!array_key_exists('APP_ENV', $_SERVER)) {
     $_SERVER['APP_ENV'] = $_ENV['APP_ENV'] ?? null;
 }
 
-$servers = array(
+$servers = [
+    'locahost:8000' => 'dev',
     'dev-symfony-4-blog.test' => 'dev',
     'symfony-4-blog.test' => 'pro'
-);
+];
+
 $isCli = PHP_SAPI === 'cli';
 
 if ($isCli) {
-    $_SERVER['APP_ENV'] = 'dev';
-    $_SERVER['APP_DEBUG'] = false;
-    $env = dirname(__DIR__) . '/.env';
+    $env = '/.env.dev';
 } else {
     if (isset($servers[$_SERVER['HTTP_HOST']])) {
-        $_server = $servers[$_SERVER['HTTP_HOST']];
-        if ($_server == 'pro') {
-            $_SERVER['APP_ENV'] = 'pro';
-            $_SERVER['APP_DEBUG'] = false;
-            $env = dirname(__DIR__) . '/.env';
-        } else {
-           $_SERVER['APP_ENV'] = 'dev';
-            $_SERVER['APP_DEBUG'] = true;
-            $env = dirname(__DIR__) . '/.env';
-        }
+        $env = '/.env.' . $servers[$_SERVER['HTTP_HOST']];
     } else {
-        die('La aplicacion no esta instalada correctamente. El servidor no es valido ' . $_SERVER['HTTP_HOST']);
+        throw new RuntimeException('The "APP" are not installed');
     }
 }
 
 unset($servers);
+$env = dirname(__DIR__) . $env;
 
 if (!class_exists(Dotenv::class)) {
     throw new RuntimeException('The "APP_ENV" environment variable is not set to "prod". Please run "composer require symfony/dotenv" to load the ".env" files configuring the application.');
 }
+
+if (!file_exists($env)) {
+    throw new RuntimeException('The file config not exists');
+}
+
 (new Dotenv())->loadEnv($env);
-
-
