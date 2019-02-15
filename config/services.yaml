@@ -1,10 +1,10 @@
-# Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
     # This parameter defines the codes of the locales (languages) enabled in the application
     app_locales: en|fr|de|es|cs|nl|ru|uk|ro|pt_BR|pl|it|ja|id|ca|sl|hr|zh_CN|bg|tr
     app.notifications.email_sender: anonymous@example.com
+    hello_message: 'Hello from service'
+    email_from: '%env(MAILER_FROM)%'
 
 services:
     # default configuration for services in *this* file
@@ -28,7 +28,13 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
-    # when the service definition only contains arguments, you can omit the
-    # 'arguments' key and define the arguments just below the service class
+    App\Mailer\Mailer:
+        arguments:
+            $mailFrom: '%email_from%'
+            
+    App\Event\UserSubscriber:
+        arguments:
+            $defaultLocale: '%kernel.default_locale%'
+            
     App\EventSubscriber\CommentNotificationSubscriber:
         $sender: '%app.notifications.email_sender%'

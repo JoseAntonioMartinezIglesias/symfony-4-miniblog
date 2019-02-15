@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository" abstract="false" final="false" start="28" end="34">
-  <file path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1013" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c1de96f645ff5be1b03998daf15a3250c4c231c1" relative="Repository/UserRepository.php"/>
-  <docblock>
-    <description compact="This custom Doctrine repository is empty because so far we don't need any custom method to query for application user information. But it's always a good practice to define a custom repository that will be used when the application grows.">See https://symfony.com/doc/current/doctrine/repository.html</description>
-    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
-    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
-  </docblock>
+<class xmlns="http://xml.phpdox.net/src" full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository" abstract="false" final="false" start="12" end="40">
+  <file path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1156" time="2019-02-15T09:38:19+00:00" unixtime="1550223499" sha1="337d988b26efa07d470e80ef1b88d9e36fc9b413" relative="Repository/UserRepository.php"/>
   <extends full="Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository" namespace="Doctrine\Bundle\DoctrineBundle\Repository" name="ServiceEntityRepository" unresolved="true"/>
-  <constructor name="__construct" start="30" end="33" abstract="false" final="false" static="false" visibility="public">
+  <constructor name="__construct" start="14" end="16" abstract="false" final="false" static="false" visibility="public">
     <parameter name="registry" byreference="false" type="object">
       <type full="Doctrine\Common\Persistence\ManagerRegistry" namespace="Doctrine\Common\Persistence" name="ManagerRegistry"/>
     </parameter>
   </constructor>
+  <method name="findLatest" start="22" end="26" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$page">
+        <type full="App\Repository\type" namespace="App\Repository" name="type"/>
+      </param>
+      <return type="object">
+        <type full="\App\Repository\Pagerfanta" namespace="\App\Repository" name="Pagerfanta"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Pagerfanta\Pagerfanta" namespace="Pagerfanta" name="Pagerfanta"/>
+    </return>
+    <parameter name="page" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="createPaginator" start="33" end="38" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description/>
+      <param type="object" variable="$query">
+        <type full="\App\Repository\Query" namespace="\App\Repository" name="Query"/>
+      </param>
+      <param type="int" variable="$page"/>
+      <return type="object">
+        <type full="\App\Repository\Pagerfanta" namespace="\App\Repository" name="Pagerfanta"/>
+      </return>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Pagerfanta\Pagerfanta" namespace="Pagerfanta" name="Pagerfanta"/>
+    </return>
+    <parameter name="query" byreference="false" type="object">
+      <type full="Doctrine\ORM\Query" namespace="Doctrine\ORM" name="Query"/>
+    </parameter>
+    <parameter name="page" byreference="false" type="int"/>
+  </method>
 </class>

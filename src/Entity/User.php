@@ -62,6 +62,16 @@ class User implements UserInterface, \Serializable {
      */
     private $roles = [];
 
+    /**
+     * @ORM\Column(type="string", nullable=true, length=30)
+     */
+    private $confirmationToken;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $enabled;
+
     public function getId() {
         return $this->id;
     }
@@ -103,17 +113,30 @@ class User implements UserInterface, \Serializable {
      */
     public function getRoles(): array {
         $roles = $this->roles;
-
-        // guarantees that a user always has at least one role for security
         if (empty($roles)) {
             $roles[] = 'ROLE_USER';
         }
-
         return array_unique($roles);
     }
 
     public function setRoles(array $roles): void {
         $this->roles = $roles;
+    }
+
+    public function getConfirmationToken() {
+        return $this->confirmationToken;
+    }
+
+    public function setConfirmationToken($confirmationToken): void {
+        $this->confirmationToken = $confirmationToken;
+    }
+
+    public function getEnabled() {
+        return $this->enabled;
+    }
+
+    public function setEnabled($enabled): void {
+        $this->enabled = $enabled;
     }
 
     /**
@@ -143,15 +166,21 @@ class User implements UserInterface, \Serializable {
      * {@inheritdoc}
      */
     public function serialize() {
-        // add $this->salt too if you don't use Bcrypt or Argon2i
-        return serialize([$this->id, $this->username, $this->password]);
+        return serialize(
+                [
+                    $this->id,
+                    $this->username,
+                    $this->password,
+                    $this->enabled
+                ]
+        );
     }
 
     /**
      * {@inheritdoc}
      */
     public function unserialize($serialized): void {
-         [$this->id, $this->username, $this->password] = unserialize($serialized, ['allowed_classes' => false]);
+        [$this->id, $this->username, $this->password, $this->enabled] = unserialize($serialized, ['allowed_classes' => false]);
     }
 
 }

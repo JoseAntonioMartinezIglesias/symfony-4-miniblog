@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="App\Entity\User" namespace="App\Entity" name="User" abstract="false" final="false" start="31" end="188">
-  <file path="../src/Entity" file="User.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/User.php" size="4288" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="33ca05b4ba2a812d4529e37b543aad8080cb0192" relative="Entity/User.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="App\Entity\User" namespace="App\Entity" name="User" abstract="false" final="false" start="13" end="157">
+  <file path="../src/Entity" file="User.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Entity/User.php" size="3460" time="2019-02-15T10:00:24+00:00" unixtime="1550224824" sha1="59e307f9c0378e2656aac192e5d3c7510b12a5d0" relative="Entity/User.php"/>
   <docblock>
     <description/>
     <orm value="\Entity(repositoryClass=&quot;App\Repository\UserRepository&quot;)"/>
-    <orm value="\Table(name=&quot;symfony_demo_user&quot;) Defines the properties of the User entity to represent the application users. See https://symfony.com/doc/current/book/doctrine.html#creating-an-entity-class  Tip: if you have an existing database, you can generate these entity class automatically. See https://symfony.com/doc/current/cookbook/doctrine/reverse_engineering.html"/>
-    <author value="Ryan Weaver &lt;weaverryan@gmail.com&gt;"/>
-    <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
+    <orm value="\Table(name=&quot;symfony_demo_user&quot;)"/>
   </docblock>
   <implements full="Symfony\Component\Security\Core\User\UserInterface" namespace="Symfony\Component\Security\Core\User" name="UserInterface" unresolved="true"/>
   <implements full="Serializable" namespace="" name="Serializable"/>
-  <member name="id" visibility="private" static="false" line="40">
+  <constant type="integer" name="NUM_ITEMS" value="10"/>
+  <member name="id" visibility="private" static="false" line="24">
     <docblock>
       <description/>
       <var type="int"/>
@@ -19,7 +18,7 @@
       <orm value="\Column(type=&quot;integer&quot;)"/>
     </docblock>
   </member>
-  <member name="fullName" visibility="private" static="false" line="48">
+  <member name="fullName" visibility="private" static="false" line="32">
     <docblock>
       <description/>
       <var type="string"/>
@@ -27,7 +26,7 @@
       <assert value="\NotBlank()"/>
     </docblock>
   </member>
-  <member name="username" visibility="private" static="false" line="57">
+  <member name="username" visibility="private" static="false" line="41">
     <docblock>
       <description/>
       <var type="string"/>
@@ -36,7 +35,7 @@
       <assert value="\Length(min=2, max=50)"/>
     </docblock>
   </member>
-  <member name="email" visibility="private" static="false" line="65">
+  <member name="email" visibility="private" static="false" line="49">
     <docblock>
       <description/>
       <var type="string"/>
@@ -44,103 +43,88 @@
       <assert value="\Email()"/>
     </docblock>
   </member>
-  <member name="password" visibility="private" static="false" line="72">
+  <member name="password" visibility="private" static="false" line="56">
     <docblock>
       <description/>
       <var type="string"/>
       <orm value="\Column(type=&quot;string&quot;)"/>
     </docblock>
   </member>
-  <member name="roles" default="" type="array" visibility="private" static="false" line="79">
+  <member name="roles" default="" type="array" visibility="private" static="false" line="63">
     <docblock>
       <description/>
       <var type="array"/>
       <orm value="\Column(type=&quot;json&quot;)"/>
     </docblock>
   </member>
-  <method name="getId" start="81" end="84" abstract="false" final="false" static="false" visibility="public">
-    <return type="int" nullable="false"/>
-  </method>
-  <method name="setFullName" start="86" end="89" abstract="false" final="false" static="false" visibility="public">
+  <method name="getId" start="65" end="67" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setFullName" start="69" end="71" abstract="false" final="false" static="false" visibility="public">
     <return type="void" nullable="false"/>
     <parameter name="fullName" byreference="false" type="string"/>
   </method>
-  <method name="getFullName" start="91" end="94" abstract="false" final="false" static="false" visibility="public">
-    <return type="string" nullable="false"/>
-  </method>
-  <method name="getUsername" start="96" end="99" abstract="false" final="false" static="false" visibility="public">
-    <return type="string" nullable="false"/>
-  </method>
-  <method name="setUsername" start="101" end="104" abstract="false" final="false" static="false" visibility="public">
+  <method name="getFullName" start="73" end="75" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getUsername" start="77" end="79" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setUsername" start="81" end="83" abstract="false" final="false" static="false" visibility="public">
     <return type="void" nullable="false"/>
     <parameter name="username" byreference="false" type="string"/>
   </method>
-  <method name="getEmail" start="106" end="109" abstract="false" final="false" static="false" visibility="public">
-    <return type="string" nullable="false"/>
-  </method>
-  <method name="setEmail" start="111" end="114" abstract="false" final="false" static="false" visibility="public">
+  <method name="getEmail" start="85" end="87" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setEmail" start="89" end="91" abstract="false" final="false" static="false" visibility="public">
     <return type="void" nullable="false"/>
     <parameter name="email" byreference="false" type="string"/>
   </method>
-  <method name="getPassword" start="116" end="119" abstract="false" final="false" static="false" visibility="public">
-    <return type="string" nullable="false"/>
-  </method>
-  <method name="setPassword" start="121" end="124" abstract="false" final="false" static="false" visibility="public">
+  <method name="getPassword" start="93" end="95" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setPassword" start="97" end="99" abstract="false" final="false" static="false" visibility="public">
     <return type="void" nullable="false"/>
     <parameter name="password" byreference="false" type="string"/>
   </method>
-  <method name="getRoles" start="129" end="139" abstract="false" final="false" static="false" visibility="public">
+  <method name="getRoles" start="104" end="113" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns the roles or permissions granted to the user for security."/>
     </docblock>
     <return type="array" nullable="false"/>
     <inline>
-      <comment value="guarantees that a user always has at least one role for security" line="133"/>
+      <comment value="guarantees that a user always has at least one role for security" line="107"/>
     </inline>
   </method>
-  <method name="setRoles" start="141" end="144" abstract="false" final="false" static="false" visibility="public">
+  <method name="setRoles" start="115" end="117" abstract="false" final="false" static="false" visibility="public">
     <return type="void" nullable="false"/>
     <parameter name="roles" byreference="false" type="array"/>
   </method>
-  <method name="getSalt" start="151" end="158" abstract="false" final="false" static="false" visibility="public">
+  <method name="getSalt" start="124" end="130" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Returns the salt that was originally used to encode the password.">{@inheritdoc}</description>
     </docblock>
-    <return type="string" nullable="true"/>
     <inline>
-      <comment value="See &quot;Do you need to use a Salt?&quot; at https://symfony.com/doc/current/cookbook/security/entity_provider.html" line="153"/>
-      <comment value="we're using bcrypt in security.yml to encode the password, so" line="154"/>
-      <comment value="the salt value is built-in and you don't have to generate one" line="155"/>
+      <comment value="See &quot;Do you need to use a Salt?&quot; at https://symfony.com/doc/current/cookbook/security/entity_provider.html" line="125"/>
+      <comment value="we're using bcrypt in security.yml to encode the password, so" line="126"/>
+      <comment value="the salt value is built-in and you don't have to generate one" line="127"/>
     </inline>
   </method>
-  <method name="eraseCredentials" start="165" end="169" abstract="false" final="false" static="false" visibility="public">
+  <method name="eraseCredentials" start="137" end="140" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Removes sensitive data from the user.">{@inheritdoc}</description>
     </docblock>
     <return type="void" nullable="false"/>
     <inline>
-      <comment value="if you had a plainPassword property, you'd nullify it here" line="167"/>
-      <comment value="$this-&gt;plainPassword = null;" line="168"/>
+      <comment value="if you had a plainPassword property, you'd nullify it here" line="138"/>
+      <comment value="$this-&gt;plainPassword = null;" line="139"/>
     </inline>
   </method>
-  <method name="serialize" start="174" end="178" abstract="false" final="false" static="false" visibility="public">
+  <method name="serialize" start="145" end="148" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="{@inheritdoc}"/>
     </docblock>
-    <return type="string" nullable="false"/>
     <inline>
-      <comment value="add $this-&gt;salt too if you don't use Bcrypt or Argon2i" line="176"/>
+      <comment value="add $this-&gt;salt too if you don't use Bcrypt or Argon2i" line="146"/>
     </inline>
   </method>
-  <method name="unserialize" start="183" end="187" abstract="false" final="false" static="false" visibility="public">
+  <method name="unserialize" start="153" end="155" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="{@inheritdoc}"/>
     </docblock>
     <return type="void" nullable="false"/>
     <parameter name="serialized" byreference="false" type="{unknown}"/>
-    <inline>
-      <comment value="add $this-&gt;salt too if you don't use Bcrypt or Argon2i" line="185"/>
-    </inline>
   </method>
   <interface full="Serializable" namespace="" name="Serializable">
     <method name="serialize" abstract="false" static="false" visibility="public" final="false">

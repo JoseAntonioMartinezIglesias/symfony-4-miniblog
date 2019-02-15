@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="App\Controller\Admin\BlogController" namespace="App\Controller\Admin" name="BlogController" abstract="false" final="false" start="40" end="180">
-  <file path="../src/Controller/Admin" file="BlogController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/BlogController.php" size="6644" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c9bc33bf6b21f17182c6349bfafbc40cac1ef54d" relative="Controller/Admin/BlogController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\Admin\BlogController" namespace="App\Controller\Admin" name="BlogController" abstract="false" final="false" start="31" end="171">
+  <file path="../src/Controller/Admin" file="BlogController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/BlogController.php" size="6413" time="2019-02-15T08:55:23+00:00" unixtime="1550220923" sha1="d6198c54d0166a481ed782a420093186f89ae7fe" relative="Controller/Admin/BlogController.php"/>
   <docblock>
     <description compact="Controller used to manage blog contents in the backend.">Please note that the application backend is developed manually for learning
 purposes. However, in your real Symfony application you should use any of the
@@ -13,7 +13,7 @@ See http://knpbundles.com/keyword/admin</description>
     <author value="Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;"/>
   </docblock>
   <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
-  <method name="index" start="56" end="61" abstract="false" final="false" static="false" visibility="public">
+  <method name="index" start="47" end="52" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Lists all Post entities.">This controller responds to two different routes with the same URL:
   * 'admin_post_index' is the route with a name that follows the same
@@ -32,7 +32,7 @@ See http://knpbundles.com/keyword/admin</description>
       <type full="App\Repository\PostRepository" namespace="App\Repository" name="PostRepository"/>
     </parameter>
   </method>
-  <method name="new" start="72" end="111" abstract="false" final="false" static="false" visibility="public">
+  <method name="new" start="63" end="102" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Creates a new Post entity."/>
       <route value="(&quot;/new&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;admin_post_new&quot;) NOTE: the Method annotation is optional, but it's a recommended practice to constraint the HTTP methods each controller responds to (by default it responds to all methods)."/>
@@ -44,14 +44,14 @@ See http://knpbundles.com/keyword/admin</description>
       <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
     </parameter>
     <inline>
-      <comment value="See https://symfony.com/doc/current/book/forms.html#submitting-forms-with-multiple-buttons" line="77"/>
-      <comment value="the isSubmitted() method is completely optional because the other" line="83"/>
-      <comment value="isValid() method already checks whether the form is submitted." line="84"/>
-      <comment value="However, we explicitly add it to improve code readability." line="85"/>
-      <comment value="See https://symfony.com/doc/current/best_practices/forms.html#handling-form-submits" line="86"/>
+      <comment value="See https://symfony.com/doc/current/book/forms.html#submitting-forms-with-multiple-buttons" line="68"/>
+      <comment value="the isSubmitted() method is completely optional because the other" line="74"/>
+      <comment value="isValid() method already checks whether the form is submitted." line="75"/>
+      <comment value="However, we explicitly add it to improve code readability." line="76"/>
+      <comment value="See https://symfony.com/doc/current/best_practices/forms.html#handling-form-submits" line="77"/>
     </inline>
   </method>
-  <method name="show" start="118" end="127" abstract="false" final="false" static="false" visibility="public">
+  <method name="show" start="109" end="118" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Finds and displays a Post entity."/>
       <route value="(&quot;/{id&lt;\d+&gt;}&quot;, methods={&quot;GET&quot;}, name=&quot;admin_post_show&quot;)"/>
@@ -63,11 +63,11 @@ See http://knpbundles.com/keyword/admin</description>
       <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
     </parameter>
     <inline>
-      <comment value="This security check can also be performed" line="120"/>
-      <comment value="using an annotation: @IsGranted(&quot;show&quot;, subject=&quot;post&quot;, message=&quot;Posts can only be shown to their authors.&quot;)" line="121"/>
+      <comment value="This security check can also be performed" line="111"/>
+      <comment value="using an annotation: @IsGranted(&quot;show&quot;, subject=&quot;post&quot;, message=&quot;Posts can only be shown to their authors.&quot;)" line="112"/>
     </inline>
   </method>
-  <method name="edit" start="135" end="153" abstract="false" final="false" static="false" visibility="public">
+  <method name="edit" start="126" end="144" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Displays a form to edit an existing Post entity."/>
       <route value="(&quot;/{id&lt;\d+&gt;}/edit&quot;,methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;admin_post_edit&quot;)"/>
@@ -83,7 +83,7 @@ See http://knpbundles.com/keyword/admin</description>
       <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
     </parameter>
   </method>
-  <method name="delete" start="161" end="179" abstract="false" final="false" static="false" visibility="public">
+  <method name="delete" start="152" end="170" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description compact="Deletes a Post entity."/>
       <route value="(&quot;/{id}/delete&quot;, methods={&quot;POST&quot;}, name=&quot;admin_post_delete&quot;)"/>
@@ -99,9 +99,9 @@ See http://knpbundles.com/keyword/admin</description>
       <type full="App\Entity\Post" namespace="App\Entity" name="Post"/>
     </parameter>
     <inline>
-      <comment value="Delete the tags associated with this blog post. This is done automatically" line="167"/>
-      <comment value="by Doctrine, except for SQLite (the database used in this application)" line="168"/>
-      <comment value="because foreign key support is not enabled by default in SQLite" line="169"/>
+      <comment value="Delete the tags associated with this blog post. This is done automatically" line="158"/>
+      <comment value="by Doctrine, except for SQLite (the database used in this application)" line="159"/>
+      <comment value="because foreign key support is not enabled by default in SQLite" line="160"/>
     </inline>
   </method>
 </class>

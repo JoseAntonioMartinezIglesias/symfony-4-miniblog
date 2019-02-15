@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="symfony" default="build">
-    <target name="build" depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,clean-autoload,phpunit,phpdox,-check-failure,deploy-to-pro"/>
+    <target name="build" depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox,-check-failure,deploy-to-pro"/>
     
     <target name="clean" unless="clean.done" description="Cleanup build artifacts">
         <delete dir="${basedir}/build/api"/>
@@ -122,18 +122,16 @@
             <arg path="${basedir}/src"/>
         </exec>
     </target>
-    
-    <target name="clean-autoload" unless="clean.autoload" description="Clean src/autoload.php">
-        <echo>Delete autoload.php</echo>
-        <delete file="${basedir}/src/autoload.php"/>
-        <property name="clean.autoload" value="true"/>
-    </target>
-    
+        
     <target name="phpunit" depends="prepare" description="Run unit tests with PHPUnit">
+        <echo>Delete autoload.php for run PhpUnit</echo>
+        <delete file="${basedir}/src/autoload.php"/>
         <exec executable="${basedir}/build/tools/phpunit.phar" resultproperty="result.phpunit" taskname="phpunit">
             <arg value="--configuration"/>
             <arg path="${basedir}/phpunit.xml.dist"/>
         </exec>
+        <property name="clean.autoload" value="true"/>
+        <property name="phpunit.run" value="true"/>
     </target>
     
     <target name="phpdox" depends="phploc-ci,phpcs-ci,phpmd-ci" description="Generate API documentation using phpDox">
@@ -152,12 +150,20 @@
     
     <target name="deploy-to-pro" unless="deploy.pro" description="Deploy to production">
         <echo>Deploy to PRO</echo>
-        <copydir src="${basedir}/src"
+        <copydir src="${basedir}"
                  dest="/var/www/html/PRO/app"/>
         <property name="deploy.pro" value="true"/>
     </target>
     
-    <chmod dir="/var/www/html/PRO/app/src" perm="ugo+rx"
-       includes="**/*"/>
+    <target name="set-chmod" description="cache clear">
+        <chmod dir="/var/www/html/PRO/app" perm="ugo+rx"
+               includes="**/*"/>
+    </target>
+    
+    <target name="cache-clear" description="cache clear">
+        <exec executable="/var/www/html/PRO/app/bin/console">
+            <arg value="cache:clear" />
+        </exec>
+    </target>
 
 </project>

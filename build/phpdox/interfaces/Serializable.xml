@@ -13,4 +13,4 @@
     </docblock>
     <parameter name="serialized" optional="false" byreference="false" type="string"/>
   </method>
-<implementors><class full="App\Entity\User" namespace="App\Entity" name="User"/></implementors></interface>
+<implementors><class full="App\Entity\User" namespace="App\Entity" name="User"/><class full="App\Entity\User" namespace="App\Entity" name="User"/></implementors></interface>

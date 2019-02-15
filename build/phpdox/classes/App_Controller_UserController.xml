@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="App\Controller\UserController" namespace="App\Controller" name="UserController" abstract="false" final="false" start="31" end="79">
-  <file path="../src/Controller" file="UserController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/UserController.php" size="2322" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="2ba9860fbb212ed708dcb42911637b11a0f7804a" relative="Controller/UserController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\UserController" namespace="App\Controller" name="UserController" abstract="false" final="false" start="19" end="89">
+  <file path="../src/Controller" file="UserController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/UserController.php" size="2641" time="2019-02-15T10:00:51+00:00" unixtime="1550224851" sha1="cffa35204d30f362016b2a28149d480f2ed03c50" relative="Controller/UserController.php"/>
   <docblock>
-    <description compact="Controller used to manage current user."/>
-    <route value="(&quot;/profile&quot;)"/>
+    <description/>
+    <route value="(&quot;/user&quot;)"/>
     <isgranted value="(&quot;ROLE_USER&quot;)"/>
-    <author value="Romain Monteil &lt;monteil.romain@gmail.com&gt;"/>
   </docblock>
   <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
-  <method name="edit" start="36" end="55" abstract="false" final="false" static="false" visibility="public">
+  <method name="index" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/&quot;, defaults={&quot;page&quot;: &quot;1&quot;}, methods={&quot;GET&quot;}, name=&quot;user_index&quot;)"/>
+      <route value="(&quot;/page/{page&lt;[1-9]\d*&gt;}&quot;, methods={&quot;GET&quot;}, name=&quot;user_index_paginated&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="page" byreference="false" type="int"/>
+    <parameter name="users" byreference="false" type="object">
+      <type full="App\Repository\UserRepository" namespace="App\Repository" name="UserRepository"/>
+    </parameter>
+  </method>
+  <method name="add" start="33" end="64" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/add&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;user_add&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+  </method>
+  <method name="edit" start="69" end="87" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description/>
       <route value="(&quot;/edit&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;user_edit&quot;)"/>
@@ -18,21 +46,6 @@
     </return>
     <parameter name="request" byreference="false" type="object">
       <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
-    </parameter>
-  </method>
-  <method name="changePassword" start="60" end="78" abstract="false" final="false" static="false" visibility="public">
-    <docblock>
-      <description/>
-      <route value="(&quot;/change-password&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;user_change_password&quot;)"/>
-    </docblock>
-    <return type="object" nullable="false">
-      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
-    </return>
-    <parameter name="request" byreference="false" type="object">
-      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
-    </parameter>
-    <parameter name="encoder" byreference="false" type="object">
-      <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
     </parameter>
   </method>
 </class>

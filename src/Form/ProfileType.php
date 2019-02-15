@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class UserType extends AbstractType {
+class ProfileType extends AbstractType {
 
     /**
      * {@inheritdoc}
@@ -27,6 +27,9 @@ class UserType extends AbstractType {
                 ])
                 ->add('email', EmailType::class, [
                     'label' => 'label.email',
+                ])
+                ->add('password', PasswordType::class, [
+                    'label' => 'label.password',
                 ])
         ;
     }

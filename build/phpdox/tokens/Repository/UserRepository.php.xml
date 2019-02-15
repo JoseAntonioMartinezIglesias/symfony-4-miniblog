@@ -1,36 +1,11 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1013" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c1de96f645ff5be1b03998daf15a3250c4c231c1" relative="Repository/UserRepository.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Repository" file="UserRepository.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Repository/UserRepository.php" size="1156" time="2019-02-15T09:38:19+00:00" unixtime="1550223499" sha1="337d988b26efa07d470e80ef1b88d9e36fc9b413" relative="Repository/UserRepository.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
   <line no="2"/>
   <line no="3">
-    <token name="T_COMMENT">/*</token>
-  </line>
-  <line no="4">
-    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
-  </line>
-  <line no="5">
-    <token name="T_COMMENT"> *</token>
-  </line>
-  <line no="6">
-    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
-  </line>
-  <line no="7">
-    <token name="T_COMMENT"> *</token>
-  </line>
-  <line no="8">
-    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
-  </line>
-  <line no="9">
-    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
-  </line>
-  <line no="10">
-    <token name="T_COMMENT"> */</token>
-  </line>
-  <line no="11"/>
-  <line no="12">
     <token name="T_NAMESPACE">namespace</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -38,8 +13,8 @@
     <token name="T_STRING">Repository</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="13"/>
-  <line no="14">
+  <line no="4"/>
+  <line no="5">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -49,7 +24,7 @@
     <token name="T_STRING">User</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="15">
+  <line no="6">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Doctrine</token>
@@ -63,7 +38,7 @@
     <token name="T_STRING">ServiceEntityRepository</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="16">
+  <line no="7">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Doctrine</token>
@@ -75,38 +50,36 @@
     <token name="T_STRING">ManagerRegistry</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="17"/>
-  <line no="18">
-    <token name="T_DOC_COMMENT">/**</token>
+  <line no="8">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Doctrine</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ORM</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Query</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="19">
-    <token name="T_DOC_COMMENT"> * This custom Doctrine repository is empty because so far we don't need any custom</token>
+  <line no="9">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="20">
-    <token name="T_DOC_COMMENT"> * method to query for application user information. But it's always a good practice</token>
+  <line no="10">
+    <token name="T_USE">use</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Adapter</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">DoctrineORMAdapter</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="21">
-    <token name="T_DOC_COMMENT"> * to define a custom repository that will be used when the application grows.</token>
-  </line>
-  <line no="22">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="23">
-    <token name="T_DOC_COMMENT"> * See https://symfony.com/doc/current/doctrine/repository.html</token>
-  </line>
-  <line no="24">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="25">
-    <token name="T_DOC_COMMENT"> * @author Ryan Weaver &lt;weaverryan@gmail.com&gt;</token>
-  </line>
-  <line no="26">
-    <token name="T_DOC_COMMENT"> * @author Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</token>
-  </line>
-  <line no="27">
-    <token name="T_DOC_COMMENT"> */</token>
-  </line>
-  <line no="28">
+  <line no="11"/>
+  <line no="12">
     <token name="T_CLASS">class</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">UserRepository</token>
@@ -114,11 +87,11 @@
     <token name="T_EXTENDS">extends</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">ServiceEntityRepository</token>
-  </line>
-  <line no="29">
+    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="30">
+  <line no="13"/>
+  <line no="14">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -130,12 +103,10 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$registry</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
-  </line>
-  <line no="31">
-    <token name="T_WHITESPACE">    </token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="32">
+  <line no="15">
     <token name="T_WHITESPACE">        </token>
     <token name="T_STRING">parent</token>
     <token name="T_DOUBLE_COLON">::</token>
@@ -150,12 +121,186 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="33">
+  <line no="16">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="34">
+  <line no="17"/>
+  <line no="18">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT">     * @param type $page</token>
+  </line>
+  <line no="20">
+    <token name="T_DOC_COMMENT">     * @return \App\Repository\Pagerfanta</token>
+  </line>
+  <line no="21">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="22">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">findLatest</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$page</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_WHITESPACE">       </token>
+  </line>
+  <line no="23">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$qb</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">createQueryBuilder</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'p'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+  </line>
+  <line no="24">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">orderBy</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'p.id'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'DESC'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="25">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$this</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">createPaginator</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$qb</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">getQuery</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$page</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_WHITESPACE">       </token>
+  </line>
+  <line no="26">
+    <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="35"/>
+  <line no="27"/>
+  <line no="28">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="29">
+    <token name="T_DOC_COMMENT">     * @param \App\Repository\Query $query</token>
+  </line>
+  <line no="30">
+    <token name="T_DOC_COMMENT">     * @param int $page</token>
+  </line>
+  <line no="31">
+    <token name="T_DOC_COMMENT">     * @return \App\Repository\Pagerfanta</token>
+  </line>
+  <line no="32">
+    <token name="T_DOC_COMMENT">     */</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PRIVATE">private</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">createPaginator</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">Query</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$query</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">int</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$page</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_COLON">:</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$paginator</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Pagerfanta</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_NEW">new</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">DoctrineORMAdapter</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$query</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$paginator</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setMaxPerPage</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">User</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">NUM_ITEMS</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_VARIABLE">$paginator</token>
+    <token name="T_OBJECT_OPERATOR">-&gt;</token>
+    <token name="T_STRING">setCurrentPage</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$page</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="37">
+    <token name="T_WHITESPACE">        </token>
+    <token name="T_RETURN">return</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$paginator</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="38">
+    <token name="T_WHITESPACE">    </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="39"/>
+  <line no="40">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="41"/>
 </source>

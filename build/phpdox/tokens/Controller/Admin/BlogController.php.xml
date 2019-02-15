@@ -1,36 +1,11 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="../src/Controller/Admin" file="BlogController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/BlogController.php" size="6644" time="2019-01-09T14:35:56+00:00" unixtime="1547044556" sha1="c9bc33bf6b21f17182c6349bfafbc40cac1ef54d" relative="Controller/Admin/BlogController.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Controller/Admin" file="BlogController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/Admin/BlogController.php" size="6413" time="2019-02-15T08:55:23+00:00" unixtime="1550220923" sha1="d6198c54d0166a481ed782a420093186f89ae7fe" relative="Controller/Admin/BlogController.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
   <line no="2"/>
   <line no="3">
-    <token name="T_COMMENT">/*</token>
-  </line>
-  <line no="4">
-    <token name="T_COMMENT"> * This file is part of the Symfony package.</token>
-  </line>
-  <line no="5">
-    <token name="T_COMMENT"> *</token>
-  </line>
-  <line no="6">
-    <token name="T_COMMENT"> * (c) Fabien Potencier &lt;fabien@symfony.com&gt;</token>
-  </line>
-  <line no="7">
-    <token name="T_COMMENT"> *</token>
-  </line>
-  <line no="8">
-    <token name="T_COMMENT"> * For the full copyright and license information, please view the LICENSE</token>
-  </line>
-  <line no="9">
-    <token name="T_COMMENT"> * file that was distributed with this source code.</token>
-  </line>
-  <line no="10">
-    <token name="T_COMMENT"> */</token>
-  </line>
-  <line no="11"/>
-  <line no="12">
     <token name="T_NAMESPACE">namespace</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -40,8 +15,8 @@
     <token name="T_STRING">Admin</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="13"/>
-  <line no="14">
+  <line no="4"/>
+  <line no="5">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -51,7 +26,7 @@
     <token name="T_STRING">Post</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="15">
+  <line no="6">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -61,7 +36,7 @@
     <token name="T_STRING">PostType</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="16">
+  <line no="7">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -71,7 +46,7 @@
     <token name="T_STRING">PostRepository</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="17">
+  <line no="8">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">App</token>
@@ -81,7 +56,7 @@
     <token name="T_STRING">Slugger</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="18">
+  <line no="9">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Sensio</token>
@@ -95,7 +70,7 @@
     <token name="T_STRING">IsGranted</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="19">
+  <line no="10">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Symfony</token>
@@ -109,7 +84,7 @@
     <token name="T_STRING">AbstractController</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="20">
+  <line no="11">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Symfony</token>
@@ -127,7 +102,7 @@
     <token name="T_STRING">SubmitType</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="21">
+  <line no="12">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Symfony</token>
@@ -139,7 +114,7 @@
     <token name="T_STRING">Request</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="22">
+  <line no="13">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Symfony</token>
@@ -151,7 +126,7 @@
     <token name="T_STRING">Response</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="23">
+  <line no="14">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Symfony</token>
@@ -165,53 +140,53 @@
     <token name="T_STRING">Route</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="24"/>
-  <line no="25">
+  <line no="15"/>
+  <line no="16">
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="26">
+  <line no="17">
     <token name="T_DOC_COMMENT"> * Controller used to manage blog contents in the backend.</token>
+  </line>
+  <line no="18">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT"> * Please note that the application backend is developed manually for learning</token>
+  </line>
+  <line no="20">
+    <token name="T_DOC_COMMENT"> * purposes. However, in your real Symfony application you should use any of the</token>
+  </line>
+  <line no="21">
+    <token name="T_DOC_COMMENT"> * existing bundles that let you generate ready-to-use backends without effort.</token>
+  </line>
+  <line no="22">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="23">
+    <token name="T_DOC_COMMENT"> * See http://knpbundles.com/keyword/admin</token>
+  </line>
+  <line no="24">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="25">
+    <token name="T_DOC_COMMENT"> * @Route("/admin/post")</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT"> * @IsGranted("ROLE_ADMIN")</token>
   </line>
   <line no="27">
     <token name="T_DOC_COMMENT"> *</token>
   </line>
   <line no="28">
-    <token name="T_DOC_COMMENT"> * Please note that the application backend is developed manually for learning</token>
-  </line>
-  <line no="29">
-    <token name="T_DOC_COMMENT"> * purposes. However, in your real Symfony application you should use any of the</token>
-  </line>
-  <line no="30">
-    <token name="T_DOC_COMMENT"> * existing bundles that let you generate ready-to-use backends without effort.</token>
-  </line>
-  <line no="31">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="32">
-    <token name="T_DOC_COMMENT"> * See http://knpbundles.com/keyword/admin</token>
-  </line>
-  <line no="33">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="34">
-    <token name="T_DOC_COMMENT"> * @Route("/admin/post")</token>
-  </line>
-  <line no="35">
-    <token name="T_DOC_COMMENT"> * @IsGranted("ROLE_ADMIN")</token>
-  </line>
-  <line no="36">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="37">
     <token name="T_DOC_COMMENT"> * @author Ryan Weaver &lt;weaverryan@gmail.com&gt;</token>
   </line>
-  <line no="38">
+  <line no="29">
     <token name="T_DOC_COMMENT"> * @author Javier Eguiluz &lt;javier.eguiluz@gmail.com&gt;</token>
   </line>
-  <line no="39">
+  <line no="30">
     <token name="T_DOC_COMMENT"> */</token>
   </line>
-  <line no="40">
+  <line no="31">
     <token name="T_CLASS">class</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">BlogController</token>
@@ -220,53 +195,53 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">AbstractController</token>
   </line>
-  <line no="41">
+  <line no="32">
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="42">
+  <line no="33">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="43">
+  <line no="34">
     <token name="T_DOC_COMMENT">     * Lists all Post entities.</token>
   </line>
-  <line no="44">
+  <line no="35">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="45">
+  <line no="36">
     <token name="T_DOC_COMMENT">     * This controller responds to two different routes with the same URL:</token>
   </line>
-  <line no="46">
+  <line no="37">
     <token name="T_DOC_COMMENT">     *   * 'admin_post_index' is the route with a name that follows the same</token>
   </line>
-  <line no="47">
+  <line no="38">
     <token name="T_DOC_COMMENT">     *     structure as the rest of the controllers of this class.</token>
   </line>
-  <line no="48">
+  <line no="39">
     <token name="T_DOC_COMMENT">     *   * 'admin_index' is a nice shortcut to the backend homepage. This allows</token>
   </line>
-  <line no="49">
+  <line no="40">
     <token name="T_DOC_COMMENT">     *     to create simpler links in the templates. Moreover, in the future we</token>
   </line>
-  <line no="50">
+  <line no="41">
     <token name="T_DOC_COMMENT">     *     could move this annotation to any other controller while maintaining</token>
   </line>
-  <line no="51">
+  <line no="42">
     <token name="T_DOC_COMMENT">     *     the route name and therefore, without breaking any existing link.</token>
   </line>
-  <line no="52">
+  <line no="43">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="53">
+  <line no="44">
     <token name="T_DOC_COMMENT">     * @Route("/", methods={"GET"}, name="admin_index")</token>
   </line>
-  <line no="54">
+  <line no="45">
     <token name="T_DOC_COMMENT">     * @Route("/", methods={"GET"}, name="admin_post_index")</token>
   </line>
-  <line no="55">
+  <line no="46">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="56">
+  <line no="47">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -282,11 +257,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Response</token>
   </line>
-  <line no="57">
+  <line no="48">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="58">
+  <line no="49">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$authorPosts</token>
     <token name="T_WHITESPACE"> </token>
@@ -319,8 +294,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="59"/>
-  <line no="60">
+  <line no="50"/>
+  <line no="51">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -341,40 +316,40 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="61">
+  <line no="52">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="62"/>
-  <line no="63">
+  <line no="53"/>
+  <line no="54">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="64">
+  <line no="55">
     <token name="T_DOC_COMMENT">     * Creates a new Post entity.</token>
   </line>
-  <line no="65">
+  <line no="56">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="66">
+  <line no="57">
     <token name="T_DOC_COMMENT">     * @Route("/new", methods={"GET", "POST"}, name="admin_post_new")</token>
   </line>
-  <line no="67">
+  <line no="58">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="68">
+  <line no="59">
     <token name="T_DOC_COMMENT">     * NOTE: the Method annotation is optional, but it's a recommended practice</token>
   </line>
-  <line no="69">
+  <line no="60">
     <token name="T_DOC_COMMENT">     * to constraint the HTTP methods each controller responds to (by default</token>
   </line>
-  <line no="70">
+  <line no="61">
     <token name="T_DOC_COMMENT">     * it responds to all methods).</token>
   </line>
-  <line no="71">
+  <line no="62">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="72">
+  <line no="63">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -390,11 +365,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Response</token>
   </line>
-  <line no="73">
+  <line no="64">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="74">
+  <line no="65">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$post</token>
     <token name="T_WHITESPACE"> </token>
@@ -407,7 +382,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="75">
+  <line no="66">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$post</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -421,12 +396,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="76"/>
-  <line no="77">
+  <line no="67"/>
+  <line no="68">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// See https://symfony.com/doc/current/book/forms.html#submitting-forms-with-multiple-buttons</token>
   </line>
-  <line no="78">
+  <line no="69">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$form</token>
     <token name="T_WHITESPACE"> </token>
@@ -444,7 +419,7 @@
     <token name="T_VARIABLE">$post</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="79">
+  <line no="70">
     <token name="T_WHITESPACE">            </token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
     <token name="T_STRING">add</token>
@@ -458,8 +433,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="80"/>
-  <line no="81">
+  <line no="71"/>
+  <line no="72">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$form</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -469,24 +444,24 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="82"/>
-  <line no="83">
+  <line no="73"/>
+  <line no="74">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// the isSubmitted() method is completely optional because the other</token>
   </line>
-  <line no="84">
+  <line no="75">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// isValid() method already checks whether the form is submitted.</token>
   </line>
-  <line no="85">
+  <line no="76">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// However, we explicitly add it to improve code readability.</token>
   </line>
-  <line no="86">
+  <line no="77">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// See https://symfony.com/doc/current/best_practices/forms.html#handling-form-submits</token>
   </line>
-  <line no="87">
+  <line no="78">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -508,7 +483,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="88">
+  <line no="79">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$post</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -527,8 +502,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="89"/>
-  <line no="90">
+  <line no="80"/>
+  <line no="81">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_WHITESPACE"> </token>
@@ -545,7 +520,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="91">
+  <line no="82">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -555,7 +530,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="92">
+  <line no="83">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -564,24 +539,24 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="93"/>
-  <line no="94">
+  <line no="84"/>
+  <line no="85">
     <token name="T_WHITESPACE">            </token>
     <token name="T_COMMENT">// Flash messages are used to notify the user about the result of the</token>
   </line>
-  <line no="95">
+  <line no="86">
     <token name="T_WHITESPACE">            </token>
     <token name="T_COMMENT">// actions. They are deleted automatically from the session as soon</token>
   </line>
-  <line no="96">
+  <line no="87">
     <token name="T_WHITESPACE">            </token>
     <token name="T_COMMENT">// as they are accessed.</token>
   </line>
-  <line no="97">
+  <line no="88">
     <token name="T_WHITESPACE">            </token>
     <token name="T_COMMENT">// See https://symfony.com/doc/current/book/controller.html#flash-messages</token>
   </line>
-  <line no="98">
+  <line no="89">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -594,8 +569,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="99"/>
-  <line no="100">
+  <line no="90"/>
+  <line no="91">
     <token name="T_WHITESPACE">            </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -614,7 +589,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="101">
+  <line no="92">
     <token name="T_WHITESPACE">                </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -626,12 +601,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="102">
+  <line no="93">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="103"/>
-  <line no="104">
+  <line no="94"/>
+  <line no="95">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -643,12 +618,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="105">
+  <line no="96">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="106"/>
-  <line no="107">
+  <line no="97"/>
+  <line no="98">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -661,7 +636,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
   </line>
-  <line no="108">
+  <line no="99">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'post'</token>
     <token name="T_WHITESPACE"> </token>
@@ -670,7 +645,7 @@
     <token name="T_VARIABLE">$post</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="109">
+  <line no="100">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'form'</token>
     <token name="T_WHITESPACE"> </token>
@@ -683,34 +658,34 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="110">
+  <line no="101">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="111">
+  <line no="102">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="112"/>
-  <line no="113">
+  <line no="103"/>
+  <line no="104">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="114">
+  <line no="105">
     <token name="T_DOC_COMMENT">     * Finds and displays a Post entity.</token>
   </line>
-  <line no="115">
+  <line no="106">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="116">
+  <line no="107">
     <token name="T_DOC_COMMENT">     * @Route("/{id&lt;\d+&gt;}", methods={"GET"}, name="admin_post_show")</token>
   </line>
-  <line no="117">
+  <line no="108">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="118">
+  <line no="109">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -726,19 +701,19 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Response</token>
   </line>
-  <line no="119">
+  <line no="110">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="120">
+  <line no="111">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// This security check can also be performed</token>
   </line>
-  <line no="121">
+  <line no="112">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// using an annotation: @IsGranted("show", subject="post", message="Posts can only be shown to their authors.")</token>
   </line>
-  <line no="122">
+  <line no="113">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -754,8 +729,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="123"/>
-  <line no="124">
+  <line no="114"/>
+  <line no="115">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -768,7 +743,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
   </line>
-  <line no="125">
+  <line no="116">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'post'</token>
     <token name="T_WHITESPACE"> </token>
@@ -777,37 +752,37 @@
     <token name="T_VARIABLE">$post</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="126">
+  <line no="117">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="127">
+  <line no="118">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="128"/>
-  <line no="129">
+  <line no="119"/>
+  <line no="120">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="130">
+  <line no="121">
     <token name="T_DOC_COMMENT">     * Displays a form to edit an existing Post entity.</token>
   </line>
-  <line no="131">
+  <line no="122">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="132">
+  <line no="123">
     <token name="T_DOC_COMMENT">     * @Route("/{id&lt;\d+&gt;}/edit",methods={"GET", "POST"}, name="admin_post_edit")</token>
   </line>
-  <line no="133">
+  <line no="124">
     <token name="T_DOC_COMMENT">     * @IsGranted("edit", subject="post", message="Posts can only be edited by their authors.")</token>
   </line>
-  <line no="134">
+  <line no="125">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="135">
+  <line no="126">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -828,11 +803,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Response</token>
   </line>
-  <line no="136">
+  <line no="127">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="137">
+  <line no="128">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$form</token>
     <token name="T_WHITESPACE"> </token>
@@ -851,7 +826,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="138">
+  <line no="129">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$form</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -861,8 +836,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="139"/>
-  <line no="140">
+  <line no="130"/>
+  <line no="131">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -884,7 +859,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="141">
+  <line no="132">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$post</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -903,7 +878,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="142">
+  <line no="133">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -920,8 +895,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="143"/>
-  <line no="144">
+  <line no="134"/>
+  <line no="135">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -934,8 +909,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="145"/>
-  <line no="146">
+  <line no="136"/>
+  <line no="137">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -960,12 +935,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="147">
+  <line no="138">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="148"/>
-  <line no="149">
+  <line no="139"/>
+  <line no="140">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -978,7 +953,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
   </line>
-  <line no="150">
+  <line no="141">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'post'</token>
     <token name="T_WHITESPACE"> </token>
@@ -987,7 +962,7 @@
     <token name="T_VARIABLE">$post</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="151">
+  <line no="142">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'form'</token>
     <token name="T_WHITESPACE"> </token>
@@ -1000,37 +975,37 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
-  <line no="152">
+  <line no="143">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="153">
+  <line no="144">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="154"/>
-  <line no="155">
+  <line no="145"/>
+  <line no="146">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="156">
+  <line no="147">
     <token name="T_DOC_COMMENT">     * Deletes a Post entity.</token>
   </line>
-  <line no="157">
+  <line no="148">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="158">
+  <line no="149">
     <token name="T_DOC_COMMENT">     * @Route("/{id}/delete", methods={"POST"}, name="admin_post_delete")</token>
   </line>
-  <line no="159">
+  <line no="150">
     <token name="T_DOC_COMMENT">     * @IsGranted("delete", subject="post")</token>
   </line>
-  <line no="160">
+  <line no="151">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="161">
+  <line no="152">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -1051,11 +1026,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Response</token>
   </line>
-  <line no="162">
+  <line no="153">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="163">
+  <line no="154">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -1081,7 +1056,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="164">
+  <line no="155">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -1093,24 +1068,24 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="165">
+  <line no="156">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="166"/>
-  <line no="167">
+  <line no="157"/>
+  <line no="158">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// Delete the tags associated with this blog post. This is done automatically</token>
   </line>
-  <line no="168">
+  <line no="159">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// by Doctrine, except for SQLite (the database used in this application)</token>
   </line>
-  <line no="169">
+  <line no="160">
     <token name="T_WHITESPACE">        </token>
     <token name="T_COMMENT">// because foreign key support is not enabled by default in SQLite</token>
   </line>
-  <line no="170">
+  <line no="161">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$post</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1123,8 +1098,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="171"/>
-  <line no="172">
+  <line no="162"/>
+  <line no="163">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_WHITESPACE"> </token>
@@ -1141,7 +1116,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="173">
+  <line no="164">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1151,7 +1126,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="174">
+  <line no="165">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$em</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1160,8 +1135,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="175"/>
-  <line no="176">
+  <line no="166"/>
+  <line no="167">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1174,8 +1149,8 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="177"/>
-  <line no="178">
+  <line no="168"/>
+  <line no="169">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -1187,12 +1162,12 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="179">
+  <line no="170">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="180">
+  <line no="171">
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="181"/>
+  <line no="172"/>
 </source>

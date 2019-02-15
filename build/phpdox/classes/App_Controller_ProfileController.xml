@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Controller\ProfileController" namespace="App\Controller" name="ProfileController" abstract="false" final="false" start="18" end="65">
+  <file path="../src/Controller" file="ProfileController.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Controller/ProfileController.php" size="2025" time="2019-02-15T09:11:06+00:00" unixtime="1550221866" sha1="05ff2f4a1c69cc9be3af81f9dbd2acf4ba94afc8" relative="Controller/ProfileController.php"/>
+  <docblock>
+    <description/>
+    <route value="(&quot;/profile&quot;)"/>
+    <isgranted value="(&quot;ROLE_USER&quot;)"/>
+  </docblock>
+  <extends full="Symfony\Bundle\FrameworkBundle\Controller\AbstractController" namespace="Symfony\Bundle\FrameworkBundle\Controller" name="AbstractController" unresolved="true"/>
+  <method name="edit" start="23" end="41" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/edit&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;profile_edit&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+  </method>
+  <method name="changePassword" start="46" end="63" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <route value="(&quot;/change-password&quot;, methods={&quot;GET&quot;, &quot;POST&quot;}, name=&quot;profile_change_password&quot;)"/>
+    </docblock>
+    <return type="object" nullable="false">
+      <type full="Symfony\Component\HttpFoundation\Response" namespace="Symfony\Component\HttpFoundation" name="Response"/>
+    </return>
+    <parameter name="request" byreference="false" type="object">
+      <type full="Symfony\Component\HttpFoundation\Request" namespace="Symfony\Component\HttpFoundation" name="Request"/>
+    </parameter>
+    <parameter name="encoder" byreference="false" type="object">
+      <type full="Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface" namespace="Symfony\Component\Security\Core\Encoder" name="UserPasswordEncoderInterface"/>
+    </parameter>
+  </method>
+</class>
