@@ -36,8 +36,7 @@ class UserController extends AbstractController {
      * @Route("/add", methods={"GET", "POST"}, name="user_add")
      */
     public function add(
-    EventDispatcherInterface $eventDispatcher,
-    TokenGenerator $tokenGenerator, PasswordGenerator $password, UserPasswordEncoderInterface $passwordEncoder, Request $request): Response {
+    EventDispatcherInterface $eventDispatcher, TokenGenerator $tokenGenerator, PasswordGenerator $password, UserPasswordEncoderInterface $passwordEncoder, Request $request): Response {
 
         $user = new User();
 
