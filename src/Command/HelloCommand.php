@@ -7,6 +7,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\DependencyInjection\Container;
 
 class HelloCommand extends Command {
 
@@ -27,6 +28,9 @@ class HelloCommand extends Command {
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
+        
+        $app = new Container();
+        
         $name = $input->getArgument('name');
         $output->writeln([
             'Hello from the app',

@@ -12,7 +12,3 @@ DATABASE_URL=mysql://root:jositoyoyo@127.0.0.1:3306/mini_blog
 MAILER_URL=gmail://jositoyoyo@gmail.com:50751615e@localhost
 MAILER_FROM=jositoyoyo@gmail.com
 ###< symfony/swiftmailer-bundle ###
-
-###> version ###
-VERSION=0.0.1
-###< version ###
