@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+    {% for user in users %}
+        <article class="post">
+            <h2>
+                <a href="{{ path('user_index') }}">
+                    {{ user.username }}
+                </a>
+            </h2>
+        </article>
+    {% else %}
+        <div class="well">{{ 'post.no_posts_found'|trans }}</div>
+    {% endfor %}
+
+    {% if users.haveToPaginate %}
+        <div class="navigation text-center">
+            {{ pagerfanta(users, 'twitter_bootstrap3_translated', {routeName: 'user_index_paginated', routeParams: app.request.query.all}) }}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+
+    <div class="section actions">
+        <a href="{{ path('user_add') }}" class="btn btn-lg btn-block btn-success">
+            <i class="fa fa-plus" aria-hidden="true"></i> {{ 'action.create_user'|trans }}
+        </a>
+    </div>
+
+    {{ parent() }}
+{% endblock %}

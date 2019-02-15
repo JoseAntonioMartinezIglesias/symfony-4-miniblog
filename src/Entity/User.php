@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of the Symfony package.
- *
- * (c) Fabien Potencier <fabien@symfony.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -18,18 +9,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  * @ORM\Table(name="symfony_demo_user")
- *
- * Defines the properties of the User entity to represent the application users.
- * See https://symfony.com/doc/current/book/doctrine.html#creating-an-entity-class
- *
- * Tip: if you have an existing database, you can generate these entity class automatically.
- * See https://symfony.com/doc/current/cookbook/doctrine/reverse_engineering.html
- *
- * @author Ryan Weaver <weaverryan@gmail.com>
- * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class User implements UserInterface, \Serializable
-{
+class User implements UserInterface, \Serializable {
+
+    const NUM_ITEMS = 10;
+
     /**
      * @var int
      *
@@ -78,56 +62,46 @@ class User implements UserInterface, \Serializable
      */
     private $roles = [];
 
-    public function getId(): int
-    {
+    public function getId() {
         return $this->id;
     }
 
-    public function setFullName(string $fullName): void
-    {
+    public function setFullName(string $fullName): void {
         $this->fullName = $fullName;
     }
 
-    public function getFullName(): string
-    {
+    public function getFullName() {
         return $this->fullName;
     }
 
-    public function getUsername(): string
-    {
+    public function getUsername() {
         return $this->username;
     }
 
-    public function setUsername(string $username): void
-    {
+    public function setUsername(string $username): void {
         $this->username = $username;
     }
 
-    public function getEmail(): string
-    {
+    public function getEmail() {
         return $this->email;
     }
 
-    public function setEmail(string $email): void
-    {
+    public function setEmail(string $email): void {
         $this->email = $email;
     }
 
-    public function getPassword(): string
-    {
+    public function getPassword() {
         return $this->password;
     }
 
-    public function setPassword(string $password): void
-    {
+    public function setPassword(string $password): void {
         $this->password = $password;
     }
 
     /**
      * Returns the roles or permissions granted to the user for security.
      */
-    public function getRoles(): array
-    {
+    public function getRoles(): array {
         $roles = $this->roles;
 
         // guarantees that a user always has at least one role for security
@@ -138,8 +112,7 @@ class User implements UserInterface, \Serializable
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): void
-    {
+    public function setRoles(array $roles): void {
         $this->roles = $roles;
     }
 
@@ -148,8 +121,7 @@ class User implements UserInterface, \Serializable
      *
      * {@inheritdoc}
      */
-    public function getSalt(): ?string
-    {
+    public function getSalt() {
         // See "Do you need to use a Salt?" at https://symfony.com/doc/current/cookbook/security/entity_provider.html
         // we're using bcrypt in security.yml to encode the password, so
         // the salt value is built-in and you don't have to generate one
@@ -162,8 +134,7 @@ class User implements UserInterface, \Serializable
      *
      * {@inheritdoc}
      */
-    public function eraseCredentials(): void
-    {
+    public function eraseCredentials(): void {
         // if you had a plainPassword property, you'd nullify it here
         // $this->plainPassword = null;
     }
@@ -171,8 +142,7 @@ class User implements UserInterface, \Serializable
     /**
      * {@inheritdoc}
      */
-    public function serialize(): string
-    {
+    public function serialize() {
         // add $this->salt too if you don't use Bcrypt or Argon2i
         return serialize([$this->id, $this->username, $this->password]);
     }
@@ -180,9 +150,8 @@ class User implements UserInterface, \Serializable
     /**
      * {@inheritdoc}
      */
-    public function unserialize($serialized): void
-    {
-        // add $this->salt too if you don't use Bcrypt or Argon2i
-        [$this->id, $this->username, $this->password] = unserialize($serialized, ['allowed_classes' => false]);
+    public function unserialize($serialized): void {
+         [$this->id, $this->username, $this->password] = unserialize($serialized, ['allowed_classes' => false]);
     }
+
 }
