@@ -41,4 +41,8 @@ services:
         
     App\Utils\Greeting:
         arguments:
-            $message: 'Anonimo'
+            $message: 'Welcome, '
+    
+    App\EventListener\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }

@@ -6,13 +6,16 @@ use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use App\Mailer\Mailer;
+use Psr\Log\LoggerInterface;
 
 class ExceptionListener {
 
     private $mailer;
+    private $logger;
     
-    public function __construct(Mailer $mailer) {
+    public function __construct(Mailer $mailer, LoggerInterface $logger) {
         $this->mailer = $mailer;
+        $this->logger = $logger;
     }
 
     public function onKernelException(GetResponseForExceptionEvent $event) {
@@ -27,9 +30,8 @@ class ExceptionListener {
         } else {
             $status = Response::HTTP_INTERNAL_SERVER_ERROR;
         }
-        
-        $this->mailer->sendConfirmationEmail($message, $status);
-        
+        $this->logger->alert($message);
+        $this->mailer->sendExceptionEmail($message, $status);
     }
 
 }

@@ -51,7 +51,7 @@ class Mailer {
             'status' => $status
         ]);
 
-        $message = (new \Swift_Message())->setSubject('Welcome to the micro-post app!')
+        $message = (new \Swift_Message())->setSubject($message)
                 ->setFrom($this->mailFrom)
                 ->setTo('jositoyoyo2@hotmail.com')
                 ->setBody($body, 'text/html');
