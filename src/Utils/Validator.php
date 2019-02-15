@@ -6,7 +6,7 @@ use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class Validator {
 
-    public function validateUsername(string $username): string {
+    public function validateUsername($username): string {
         if (empty($username)) {
             throw new InvalidArgumentException('The username can not be empty.');
         }
@@ -18,7 +18,7 @@ class Validator {
         return $username;
     }
 
-    public function validatePassword(string $plainPassword): string {
+    public function validatePassword($plainPassword): string {
         if (empty($plainPassword)) {
             throw new InvalidArgumentException('The password can not be empty.');
         }
@@ -30,7 +30,7 @@ class Validator {
         return $plainPassword;
     }
 
-    public function validateEmail(string $email): string {
+    public function validateEmail($email): string {
         if (empty($email)) {
             throw new InvalidArgumentException('The email can not be empty.');
         }
@@ -42,7 +42,7 @@ class Validator {
         return $email;
     }
 
-    public function validateFullName(string $fullName): string {
+    public function validateFullName($fullName): string {
         if (empty($fullName)) {
             throw new InvalidArgumentException('The full name can not be empty.');
         }

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="../src/Utils" file="Validator.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Validator.php" size="1518" time="2019-02-14T20:40:05+00:00" unixtime="1550176805" sha1="26cf2a0327ba39a3ce9da093c9df412e81880302" relative="Utils/Validator.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="../src/Utils" file="Validator.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Validator.php" size="1490" time="2019-02-15T07:43:44+00:00" unixtime="1550216624" sha1="c599bd07f01b7d02a0936321eb1edd8176685351" relative="Utils/Validator.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -45,8 +45,6 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">validateUsername</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_STRING">string</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$username</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -142,8 +140,6 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">validatePassword</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_STRING">string</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$plainPassword</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -239,8 +235,6 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">validateEmail</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_STRING">string</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$email</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>
@@ -336,8 +330,6 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">validateFullName</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_STRING">string</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$fullName</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COLON">:</token>

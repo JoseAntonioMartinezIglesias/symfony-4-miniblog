@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class xmlns="http://xml.phpdox.net/src" full="App\Utils\Validator" namespace="App\Utils" name="Validator" abstract="false" final="false" start="7" end="53">
-  <file path="../src/Utils" file="Validator.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Validator.php" size="1518" time="2019-02-14T20:40:05+00:00" unixtime="1550176805" sha1="26cf2a0327ba39a3ce9da093c9df412e81880302" relative="Utils/Validator.php"/>
+  <file path="../src/Utils" file="Validator.php" realpath="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Validator.php" size="1490" time="2019-02-15T07:43:44+00:00" unixtime="1550216624" sha1="c599bd07f01b7d02a0936321eb1edd8176685351" relative="Utils/Validator.php"/>
   <method name="validateUsername" start="9" end="19" abstract="false" final="false" static="false" visibility="public">
     <return type="string" nullable="false"/>
-    <parameter name="username" byreference="false" type="string"/>
+    <parameter name="username" byreference="false" type="{unknown}"/>
   </method>
   <method name="validatePassword" start="21" end="31" abstract="false" final="false" static="false" visibility="public">
     <return type="string" nullable="false"/>
-    <parameter name="plainPassword" byreference="false" type="string"/>
+    <parameter name="plainPassword" byreference="false" type="{unknown}"/>
   </method>
   <method name="validateEmail" start="33" end="43" abstract="false" final="false" static="false" visibility="public">
     <return type="string" nullable="false"/>
-    <parameter name="email" byreference="false" type="string"/>
+    <parameter name="email" byreference="false" type="{unknown}"/>
   </method>
   <method name="validateFullName" start="45" end="51" abstract="false" final="false" static="false" visibility="public">
     <return type="string" nullable="false"/>
-    <parameter name="fullName" byreference="false" type="string"/>
+    <parameter name="fullName" byreference="false" type="{unknown}"/>
   </method>
 </class>

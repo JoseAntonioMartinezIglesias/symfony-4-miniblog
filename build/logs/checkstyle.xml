@@ -39,11 +39,11 @@
 </file>
 <file name="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/Utils/Validator.php">
  <error line="7" column="17" severity="error" message="Opening brace of a class must be on the line after the definition" source="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
- <error line="9" column="64" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="9" column="57" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
  <error line="15" column="125" severity="warning" message="Line exceeds 120 characters; contains 125 characters" source="Generic.Files.LineLength.TooLong"/>
- <error line="21" column="69" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
- <error line="33" column="58" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
- <error line="45" column="64" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="21" column="62" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="33" column="51" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+ <error line="45" column="57" severity="error" message="Opening brace should be on a new line" source="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
  <error line="53" column="1" severity="error" message="The closing brace for the class must go on the next line after the body" source="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
 </file>
 <file name="/var/www/html/joseantoniomartinez/symfony-4-mini-blog/app/src/DataFixtures/AppFixtures.php">
