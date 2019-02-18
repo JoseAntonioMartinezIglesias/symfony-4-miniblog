@@ -46,3 +46,16 @@ services:
     App\EventListener\ExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }
+            
+    App\EventListener\KernelListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.response }
+            
+    monolog.formatter.session_request:
+        class: Monolog\Formatter\LineFormatter
+        arguments:
+            - "[%%datetime%%] [%%extra.token%%] %%channel%%.%%level_name%%: %%message%% %%context%% %%extra%%\n"
+
+    App\Logger\SessionRequestProcessor:
+        tags:
+            - { name: monolog.processor, handler: main }

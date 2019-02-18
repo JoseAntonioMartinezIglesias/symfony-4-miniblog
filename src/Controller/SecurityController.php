@@ -9,12 +9,14 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 
-class SecurityController extends AbstractController {
+class SecurityController extends AbstractController
+{
 
     /**
      * @Route("/login", name="security_login")
      */
-    public function login(AuthenticationUtils $helper): Response {
+    public function login(AuthenticationUtils $helper): Response
+    {
         return $this->render('security/login.html.twig', [
                     // last username entered by the user (if any)
                     'last_username' => $helper->getLastUsername(),
@@ -26,7 +28,8 @@ class SecurityController extends AbstractController {
     /**
      * @Route("/logout", name="security_logout")
      */
-    public function logout(): void {
+    public function logout(): void
+    {
         throw new \Exception('This should never be reached!');
     }
 
@@ -34,9 +37,9 @@ class SecurityController extends AbstractController {
      * @Route("/confirm/{token}", name="security_confirm")
      */
     public function confirm(
-            
     string $token, UserRepository $userRepository, EntityManagerInterface $entityManager
-    ) {
+    )
+    {
         $user = $userRepository->findOneBy(
                 [
                     'confirmationToken' => $token,

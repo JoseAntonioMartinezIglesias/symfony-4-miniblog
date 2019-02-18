@@ -1,8 +1,8 @@
 {
-    "name": "symfony/symfony-demo",
+    "name": "symfony/miniblog",
     "license": "MIT",
     "type": "project",
-    "description": "Symfony Demo Application",
+    "description": "Symfony MiniBlog Application",
     "require": {
         "php": "^7.1.3",
         "ext-pdo_sqlite": "*",
@@ -26,6 +26,7 @@
         "symfony/twig-bundle": "*",
         "symfony/validator": "*",
         "symfony/webpack-encore-bundle": "dev-master",
+        "symfony/workflow": "4.2.*",
         "symfony/yaml": "*",
         "twig/extensions": "^1.5",
         "white-october/pagerfanta-bundle": "^1.1"

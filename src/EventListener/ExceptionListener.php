@@ -32,6 +32,7 @@ class ExceptionListener {
         }
         $this->logger->alert($message);
         $this->mailer->sendExceptionEmail($message, $status);
+        
     }
 
 }
